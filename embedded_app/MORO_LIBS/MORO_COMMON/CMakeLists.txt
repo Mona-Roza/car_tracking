@@ -1,4 +1,4 @@
-set(srcs "./src/MoRo_COMMON.cpp" )
+set(srcs "./src/MORO_COMMON.cpp" )
 
 set(include_dir "./include")
 

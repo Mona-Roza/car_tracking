@@ -1,6 +1,4 @@
-#include <stdio.h>
+#include "MORO_COMMON.h"
 
-void app_main(void)
-{
-
+void app_main(void) {
 }

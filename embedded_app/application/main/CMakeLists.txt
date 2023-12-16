@@ -1,2 +1,9 @@
-idf_component_register(SRCS "main.cpps"
-                    INCLUDE_DIRS ".")
+set(srcs "main.cpp")
+
+set(include_dirs ".")
+
+idf_component_register(SRCS "${srcs}"
+                       INCLUDE_DIRS ${include_dirs}
+                       
+                       PRIV_REQUIRES MORO_COMMON
+                    )

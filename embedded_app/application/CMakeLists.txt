@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.16)
 message("Mona Roza's Project CMAKE")
 
 # Adding some extra component directories
-set(EXTRA_COMPONENT_DIRS ../libs)
+set(EXTRA_COMPONENT_DIRS ../MORO_LIBS)
 
 #Esp reads this variable and puts into application.bin, so we need to set twice
 #Both here and both below!
