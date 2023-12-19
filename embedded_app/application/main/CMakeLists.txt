@@ -5,5 +5,10 @@ set(include_dirs ".")
 idf_component_register(SRCS "${srcs}"
                        INCLUDE_DIRS ${include_dirs}
                        
-                       PRIV_REQUIRES MORO_COMMON
+                       PRIV_REQUIRES 
+                       MORO_COMMON
+                       MORO_SIM800L
+
+                       esp_timer
+                       driver
                     )

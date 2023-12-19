@@ -10,19 +10,23 @@
 #include <vector>
 
 #include "cJSON.h"
+#include "driver/gpio.h"
+#include "driver/uart.h"
+#include "esp_cpu.h"
 #include "esp_log.h"
+#include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
+#include "freertos/portmacro.h"
 #include "freertos/semphr.h"  // Include the semaphore definitions
 #include "freertos/task.h"	  // Include the task definitions
 #include "lwip/err.h"
 #include "lwip/sys.h"
 #include "sdkconfig.h"
 
-
 /*
-    If you want to use main in C++ you have to use 
-    extern "C" to prevent name mangling.
+	If you want to use main in C++ you have to use
+	extern "C" to prevent name mangling.
 */
 extern "C" {
 void app_main(void);
