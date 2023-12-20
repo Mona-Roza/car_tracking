@@ -8,6 +8,8 @@ idf_component_register(SRCS "${srcs}"
                        PRIV_REQUIRES 
                        MORO_COMMON
                        MORO_SIM800L
+                       MORO_WEBSERVER
+                       MORO_MQTT
 
                        esp_timer
                        driver

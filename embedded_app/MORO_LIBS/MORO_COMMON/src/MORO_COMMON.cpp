@@ -209,4 +209,71 @@ bool wildcard_match(const char* pattern, const char* value) {
 	return false;
 }
 
+esp_err_t get_efuse_mac(moro_mac_t* ef_mac) {
+	uint8_t mac[6];
+	memset(mac, 0, sizeof(mac));
+
+#if !CONFIG_IDF_TARGET_ESP32
+	size_t size_bits = esp_efuse_get_field_size(ESP_EFUSE_USER_DATA_MAC_CUSTOM);
+	assert((size_bits % 8) == 0);
+	esp_err_t err = esp_efuse_read_field_blob(ESP_EFUSE_USER_DATA_MAC_CUSTOM, mac, size_bits);
+	if (err != ESP_OK) {
+		return err;
+	}
+	size_t size = size_bits / 8;
+	if (mac[0] == 0 && memcmp(mac, &mac[1], size - 1) == 0) {
+		MORO_LOGV("eFuse MAC_CUSTOM is empty");
+		return ESP_ERR_INVALID_MAC;
+	}
+#else
+	uint8_t version;
+	esp_efuse_read_field_blob(ESP_EFUSE_MAC_CUSTOM_VER, &version, 8);
+	if (version != 1) {
+		// version 0 means has not been setup
+		if (version == 0) {
+			MORO_LOGV("No base MAC address in eFuse (version=0)");
+		} else if (version != 1) {
+			MORO_LOGV("Base MAC address version error, version = %d", version);
+		}
+		return ESP_ERR_INVALID_VERSION;
+	}
+
+	uint8_t efuse_crc;
+	esp_efuse_read_field_blob(ESP_EFUSE_MAC_CUSTOM, mac, 48);
+	esp_efuse_read_field_blob(ESP_EFUSE_MAC_CUSTOM_CRC, &efuse_crc, 8);
+	uint8_t calc_crc = esp_rom_efuse_mac_address_crc8(mac, 6);
+
+	if (efuse_crc != calc_crc) {
+		MORO_LOGV("Base MAC address from BLK3 of EFUSE CRC error, efuse_crc = 0x%02x; calc_crc = 0x%02x", efuse_crc, calc_crc);
+#ifdef CONFIG_ESP_MAC_IGNORE_MAC_CRC_ERROR
+		MORO_LOGV("Ignore MAC CRC error");
+#else
+		return ESP_ERR_INVALID_CRC;
+#endif
+	}
+#endif
+
+	sprintf(ef_mac->mac_str, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+	memcpy(ef_mac->mac, mac, sizeof(mac));
+
+	return ESP_OK;
+}
+
+esp_err_t get_wifi_mac(moro_mac_t* wi_mac) {
+	esp_err_t ret = ESP_FAIL;
+	uint8_t mac[6];
+	memset(mac, 0, sizeof(mac));
+
+	ret = esp_read_mac(mac, ESP_MAC_WIFI_STA);
+	if (ret != ESP_OK) {
+		MORO_LOGE("esp_read_mac failed");
+		return ret;
+	}
+
+	sprintf(wi_mac->mac_str, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+	memcpy(wi_mac->mac, mac, sizeof(mac));
+
+	return ret;
+}
+
 // ============================================================

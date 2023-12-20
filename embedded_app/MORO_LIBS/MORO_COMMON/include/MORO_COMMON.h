@@ -13,7 +13,11 @@
 #include "driver/gpio.h"
 #include "driver/uart.h"
 #include "esp_cpu.h"
+#include "esp_efuse.h"
+#include "esp_efuse_table.h"
 #include "esp_log.h"
+#include "esp_mac.h"
+#include "esp_rom_efuse.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
@@ -126,6 +130,19 @@ void reset_esp_log_printf();
 std::vector<std::string> split(const char* str, char delimiter);
 
 bool wildcard_match(const char* pattern, const char* value);
+
+typedef struct {
+	uint8_t mac[6];
+	char mac_str[18];
+} moro_mac_t;
+
+/*
+	esp_tool.py --chip esp32 efuse dump | grep MAC
+	esp_tool.py --chip esp32 efuse read_mac
+*/
+esp_err_t get_efuse_mac(moro_mac_t* ef_mac);
+
+esp_err_t get_wifi_mac(moro_mac_t* wi_mac);
 
 //=============================================================
 
