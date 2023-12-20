@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+I75MxHiqo1EwUrMxKK6YtdoI4wu/4ChwnAAw00GMNSPVgC3HS92/sfSaWk/TAglzi1rJVQFj2oGI5TeKDn22g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Service\\NLayer.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\musta\\.nuget\\packages\\mqttnet\\4.3.3.952\\mqttnet.4.3.3.952.nupkg.sha512",
+    "C:\\Users\\musta\\.nuget\\packages\\mqttnet.aspnetcore\\4.3.3.952\\mqttnet.aspnetcore.4.3.3.952.nupkg.sha512",
+    "C:\\Users\\musta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
