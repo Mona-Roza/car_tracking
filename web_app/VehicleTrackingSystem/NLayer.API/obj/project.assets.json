@@ -623,11 +623,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.API\\NLayer.API.csproj",
+      "projectUniqueName": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.API\\NLayer.API.csproj",
       "projectName": "NLayer.API",
-      "projectPath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.API\\NLayer.API.csproj",
+      "projectPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.API\\NLayer.API.csproj",
       "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.API\\obj\\",
+      "outputPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -649,8 +649,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Service\\NLayer.Service.csproj": {
-              "projectPath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Service\\NLayer.Service.csproj"
+            "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Service\\NLayer.Service.csproj": {
+              "projectPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Service\\NLayer.Service.csproj"
             }
           }
         }

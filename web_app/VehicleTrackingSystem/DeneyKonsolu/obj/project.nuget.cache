@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LFu7xUGuXM7U9a12JhncqnKggwZpZPM4DpPMfGi0B7srnltr2+C6OAQ/oS/QxvE9uy/W7viCsYYBI7QfNtHHzQ==",
+  "dgSpecHash": "ZaVaIhzf0y+nJ7bR37SfE+mtccQ9cGK3Ns+xIZqvg/fiLxSRqtjGeFShShzYZKDRwHFgx8MZ2OTFVxQS4U7J1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\DeneyKonsolu\\DeneyKonsolu.csproj",
+  "projectFilePath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\DeneyKonsolu\\DeneyKonsolu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\musta\\.nuget\\packages\\mqttnet\\4.3.3.952\\mqttnet.4.3.3.952.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\mqttnet.aspnetcore\\4.3.3.952\\mqttnet.aspnetcore.4.3.3.952.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "17pQZlItkPRGlz/Z827S7fCY0zCv6puzeKYBE0iUArdnDt3zbkV6k1svwG1V+XomObvQVR0GBavs0jdnc159XA==",
+  "dgSpecHash": "jrCZvpeGqqTA+bkCvbFoKQg96aiVLPhloY0T/Ow+tbYMhRyxkn+PI4u4osKT7uFElvSkh/vfg+Ey+ft2JmqkOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\MVC\\MVC.csproj",
+  "projectFilePath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\MVC\\MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\musta\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

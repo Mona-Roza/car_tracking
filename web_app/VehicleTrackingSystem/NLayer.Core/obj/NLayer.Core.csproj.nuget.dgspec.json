@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj": {}
+    "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj": {
+    "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj",
+        "projectUniqueName": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj",
         "projectName": "NLayer.Core",
-        "projectPath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj",
+        "projectPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj",
         "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Core\\obj\\",
+        "outputPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

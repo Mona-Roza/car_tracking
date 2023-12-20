@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wAPd4fmO45CjApuUsJ94SeZyFMqkv2RNZwf76ZN/fLHJp99qKlPSs4ZPnX6OX49NobUfd9xCETi7pIrmoP//Aw==",
+  "dgSpecHash": "tf5zIFe65baAo9UJBvViIEZNhWX8/hfkewOTnZXVH//a5tb2NWrjt7yFnx2jYwQFkllSaU1SN0ztNVEp4umepw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\musta\\source\\repos\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj",
+  "projectFilePath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\VehicleTrackingSystem\\NLayer.Core\\NLayer.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
