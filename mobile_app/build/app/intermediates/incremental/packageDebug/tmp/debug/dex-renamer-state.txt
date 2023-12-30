@@ -1,0 +1,4 @@
+#Wed Dec 20 19:02:45 TRT 2023
+base.0=C\:\\Users\\Ugar\\AndroidStudioProjects\\arac_takip_sistemi\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

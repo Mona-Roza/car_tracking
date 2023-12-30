@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Ugar\AndroidStudioProjects\arac_takip_sistemi\build\windows\x64\CMakeFiles\e991b8ee1b2764fb1ad8c3ce794a8e79\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{45A535B9-5CE5-3E93-AB68-86284CAA91DD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
