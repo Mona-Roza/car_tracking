@@ -4,7 +4,7 @@
             "outputFile": "com.example.arac_takip_sistemi.app-mergeDebugResources-12:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ugar\\.gradle\\caches\\transforms-3\\87e24ee8689e985fbc596f6976aab002\\transformed\\core-1.6.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\ilkaa\\.gradle\\caches\\transforms-3\\87e24ee8689e985fbc596f6976aab002\\transformed\\core-1.6.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

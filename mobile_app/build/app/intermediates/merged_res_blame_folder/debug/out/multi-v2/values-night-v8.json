@@ -4,7 +4,7 @@
             "outputFile": "com.example.arac_takip_sistemi.app-mergeDebugResources-12:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ugar\\AndroidStudioProjects\\arac_takip_sistemi\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\ilkaa\\Desktop\\aractakipsistemi\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -1,0 +1,1 @@
+ C:\\Users\\ilkaa\\Desktop\\aractakipsistemi\\.dart_tool\\flutter_build\\927b3019c2c550b201d013734b041f4c\\native_assets.yaml: 
