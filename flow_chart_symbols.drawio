@@ -1,35 +1,104 @@
-<mxfile host="app.diagrams.net" modified="2024-01-05T12:51:47.652Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="_NOeO0bKjlDCcoT5ez28" version="22.1.16" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-05T13:06:12.216Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5ygU6-HCQav5sPNA_0KY" version="22.1.16" type="github">
   <diagram name="Page-1" id="e9KVWNwdquVDA6yy_A7A">
-    <mxGraphModel dx="498" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1176" dy="1138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="360" height="240" as="geometry" />
+        </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="40" y="120" width="360" height="320" as="geometry" />
+          <mxGeometry x="480" y="80" width="360" height="400" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-1" value="Start Of Program" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="80.09" height="40" as="geometry" />
+          <mxGeometry x="80" y="160" width="80.09" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-2" value="&lt;font face=&quot;Times New Roman&quot;&gt;Program başlangıcı&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="160" y="40" width="160" height="40" as="geometry" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-2" value="&lt;font face=&quot;Times New Roman&quot;&gt;Program başlangıcı&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-3" value="Init functions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="80" y="200" width="80" height="40" as="geometry" />
+          <mxGeometry x="520" y="160" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-4" value="&lt;font face=&quot;Times New Roman&quot;&gt;Fonksiyon Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="120" width="360" height="40" as="geometry" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-4" value="&lt;font face=&quot;Times New Roman&quot;&gt;Akış Şeması Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=#56517e;fillColor=#d0cee2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry width="850" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-6" value="&lt;font face=&quot;Times New Roman&quot;&gt;Başlatıcı fonksiyonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="200" y="200" width="160" height="40" as="geometry" />
+          <mxGeometry x="640" y="160" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-7" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Create thread functions&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="80" y="280" width="80" height="40" as="geometry" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-7" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Create thread/queue functions&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-8" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread yaratan fonksiyonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="200" y="280" width="160" height="40" as="geometry" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-8" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread/Queue yaratan fonksi-yonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="240" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-9" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread yaratan fonksiyonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="200" y="360" width="160" height="40" as="geometry" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-9" value="&lt;font face=&quot;Times New Roman&quot;&gt;Herhangi bir işlevi olan fonksi-yon&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-10" value="Other Functions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="400" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-11" value="Notification Functions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="520" y="320" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-12" value="&lt;font face=&quot;Times New Roman&quot;&gt;Bildirim fonksiyonları, iki veya daha çok thread arasında iletişim kurmaya yararlar.&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-14" value="Start Of Thread" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="80.08999999999997" y="240" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-15" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread başlangıcı&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-16" value="&lt;font face=&quot;Times New Roman&quot;&gt;Fonksiyon Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=#10739e;fillColor=#b1ddf0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480.09" y="80" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="360" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-18" value="&lt;font face=&quot;Times New Roman&quot;&gt;Kontrol İfade Sembolleri&lt;/font&gt;" style="text;html=1;fillColor=#b1ddf0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-19" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Abortion flow control&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-20" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Soft flow control&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-21" value="&lt;font face=&quot;Times New Roman&quot;&gt;Programı baştan başlatan koşullar&amp;nbsp;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-22" value="&lt;font face=&quot;Times New Roman&quot;&gt;Akış kontrolü sağlayan basit koşullar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-24" value="&lt;font face=&quot;Times New Roman&quot;&gt;Başlangıç Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=#10739e;fillColor=#b1ddf0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-25" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#ACA2FC;" vertex="1" parent="1">
+          <mxGeometry x="480" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-26" value="&amp;nbsp;Thread" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ACA2FC;strokeColor=#ACA2FC;" vertex="1" parent="1">
+          <mxGeometry x="580" y="500" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-28" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="500" y="540" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-31" value="&lt;font face=&quot;Times New Roman&quot;&gt;Herhangi bir işlevi olan thread&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="540" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-32" value="Delay x" style="shape=delay;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480.09" y="640" width="79.91" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-33" value="&lt;font face=&quot;Times New Roman&quot;&gt;X süre bekleme&amp;nbsp;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="640" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-35" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Power.svg;" vertex="1" parent="1">
+          <mxGeometry x="726.9699999999999" y="640" width="25.88" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-36" value="Power" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="640" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-37" value="&lt;font face=&quot;Times New Roman&quot;&gt;Güç&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="640" width="40" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
