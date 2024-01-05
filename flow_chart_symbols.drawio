@@ -1,9 +1,36 @@
-<mxfile host="app.diagrams.net" modified="2024-01-05T12:45:15.301Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="22.1.16" etag="Ao9t1BJ12X1pHxOLr8MC" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-05T12:51:47.652Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="_NOeO0bKjlDCcoT5ez28" version="22.1.16" type="github">
   <diagram name="Page-1" id="e9KVWNwdquVDA6yy_A7A">
-    <mxGraphModel>
+    <mxGraphModel dx="498" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="360" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-1" value="Start Of Program" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="80.09" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-2" value="&lt;font face=&quot;Times New Roman&quot;&gt;Program başlangıcı&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-3" value="Init functions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-4" value="&lt;font face=&quot;Times New Roman&quot;&gt;Fonksiyon Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-6" value="&lt;font face=&quot;Times New Roman&quot;&gt;Başlatıcı fonksiyonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-7" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Create thread functions&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-8" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread yaratan fonksiyonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-9" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread yaratan fonksiyonlar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="160" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
