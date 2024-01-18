@@ -1,14 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2024-01-18T13:24:52.403Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="0rOPno6-rT1wTXOH2Oq6" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-18T17:24:13.431Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="TRiwPK_2DOAFNu6LvTYf" version="22.1.21" type="github">
   <diagram name="Page-1" id="i7anXDzvivj3QK4yiTyE">
-    <mxGraphModel dx="984" dy="626" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1093" dy="696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="xi-QjfqhYSJSX6jupqze-259" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="420" y="740" width="410" height="210" as="geometry" />
+          <mxGeometry x="860" y="730" width="410" height="210" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-130" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="415" y="490" width="425" height="210" as="geometry" />
+          <mxGeometry x="755" y="500" width="425" height="210" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-16" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Power.svg;" parent="1" vertex="1">
           <mxGeometry x="106.96999999999994" y="40" width="25.88" height="40" as="geometry" />
@@ -79,13 +79,15 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-28" value="Init Sim800L module" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="320" y="560" width="80" height="40" as="geometry" />
+          <mxGeometry x="320" y="520" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-233" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-30" target="xi-QjfqhYSJSX6jupqze-94" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360.0000000000002" y="880" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-30" value="Init MQTT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="320" y="920" width="80" height="40" as="geometry" />
+          <mxGeometry x="320" y="880" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-34" target="xi-QjfqhYSJSX6jupqze-60" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -99,14 +101,11 @@
         <mxCell id="xi-QjfqhYSJSX6jupqze-35" value="Init Webserver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="80" y="880" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-213" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-36" target="xi-QjfqhYSJSX6jupqze-168" edge="1">
+        <mxCell id="U0A5DU-_MACA9M0HJrla-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xi-QjfqhYSJSX6jupqze-36" target="U0A5DU-_MACA9M0HJrla-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-251" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-36" target="xi-QjfqhYSJSX6jupqze-30" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-36" value="Create Webserver Serve Thread" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="320" y="1000" width="80" height="40" as="geometry" />
+        <mxCell id="xi-QjfqhYSJSX6jupqze-36" value="Serve Web page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1040" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-47" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#ACA2FC;" parent="1" vertex="1">
           <mxGeometry x="300" y="20" width="360" height="120" as="geometry" />
@@ -175,11 +174,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-212" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-66" target="xi-QjfqhYSJSX6jupqze-36" edge="1">
+        <mxCell id="xi-QjfqhYSJSX6jupqze-212" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-66" target="xi-QjfqhYSJSX6jupqze-36" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="240" y="1000" />
-              <mxPoint x="240" y="1020" />
+              <mxPoint x="120" y="1060" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -200,7 +198,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-84" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Is Sim800L inited?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" parent="1" vertex="1">
-          <mxGeometry x="320" y="440" width="80" height="80" as="geometry" />
+          <mxGeometry x="320" y="400" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-234" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-94" target="xi-QjfqhYSJSX6jupqze-142" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -211,29 +209,29 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-94" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Is MQTT inited?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" parent="1" vertex="1">
-          <mxGeometry x="320" y="800" width="80" height="80" as="geometry" />
+          <mxGeometry x="320" y="760" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-273" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-114" target="xi-QjfqhYSJSX6jupqze-268" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-114" value="Subscribe Topics" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="730" y="890" width="80" height="40" as="geometry" />
+          <mxGeometry x="1170" y="880" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-245" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-117" target="xi-QjfqhYSJSX6jupqze-119" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="720" y="560" />
-              <mxPoint x="800" y="560" />
+              <mxPoint x="1060" y="570" />
+              <mxPoint x="1140" y="570" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-277" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-117" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="660" y="620" as="targetPoint" />
+            <mxPoint x="1000" y="630" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="720" y="670" />
-              <mxPoint x="660" y="670" />
+              <mxPoint x="1060" y="680" />
+              <mxPoint x="1000" y="680" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -243,18 +241,18 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-117" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Is there any message waiting to transmit in the queue?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
-          <mxGeometry x="680" y="580" width="80" height="80" as="geometry" />
+          <mxGeometry x="1020" y="590" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-279" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-119" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="670" y="620" as="targetPoint" />
+            <mxPoint x="1010" y="630" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-119" value="Publish message" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="755" y="500" width="80" height="40" as="geometry" />
+          <mxGeometry x="1095" y="510" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-141" value="MQTT Message Thread" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ACA2FC;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="410" y="480" width="40" height="40" as="geometry" />
+          <mxGeometry x="750" y="490" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-276" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-142" target="xi-QjfqhYSJSX6jupqze-271" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -264,22 +262,24 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-142" value="Create MQTT Connection Thread" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="320" y="720" width="80" height="40" as="geometry" />
+        <mxCell id="xi-QjfqhYSJSX6jupqze-142" value="Create MQTT State Thread" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="320" y="680" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-280" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-143" target="xi-QjfqhYSJSX6jupqze-154" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="xi-QjfqhYSJSX6jupqze-280" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" target="xi-QjfqhYSJSX6jupqze-154" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740.0000000000002" y="670.0769230769231" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-143" value="Create MQTT Message Thread" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="320" y="640" width="80" height="40" as="geometry" />
+          <mxGeometry x="320" y="600" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-154" target="xi-QjfqhYSJSX6jupqze-170" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="630" y="600" as="targetPoint" />
+            <mxPoint x="970" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-154" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
-          <mxGeometry x="440" y="600" width="80" height="40" as="geometry" />
+          <mxGeometry x="780" y="610" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-159" value="Sim800L Thread" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ACA2FC;strokeColor=#ACA2FC;" parent="1" vertex="1">
           <mxGeometry x="630" y="10" width="40" height="40" as="geometry" />
@@ -291,7 +291,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-160" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Create Sim800L&amp;nbsp; Connection Thread&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="320" y="360" width="80" height="40" as="geometry" />
+          <mxGeometry x="320" y="320" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-183" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-164" target="xi-QjfqhYSJSX6jupqze-182" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -299,49 +299,25 @@
         <mxCell id="xi-QjfqhYSJSX6jupqze-164" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
           <mxGeometry x="320" y="80" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-166" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="420" y="980" width="260" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-167" value="Webserver Serve Thread" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ACA2FC;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="650" y="960" width="40" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-180" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-168" target="xi-QjfqhYSJSX6jupqze-179" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-168" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
-          <mxGeometry x="440" y="1000" width="80" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-242" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-170" target="xi-QjfqhYSJSX6jupqze-117" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-170" value="Create MQTT Message Queue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="560" y="600" width="80" height="40" as="geometry" />
+          <mxGeometry x="900" y="610" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-281" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="650" y="620" as="targetPoint" />
-            <mxPoint x="519" y="510" as="sourcePoint" />
+            <mxPoint x="990" y="630" as="targetPoint" />
+            <mxPoint x="859" y="520" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="519" y="530" />
-              <mxPoint x="650" y="530" />
-              <mxPoint x="650" y="620" />
+              <mxPoint x="859" y="540" />
+              <mxPoint x="990" y="540" />
+              <mxPoint x="990" y="630" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-173" value="Add Message to queue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="480" y="470" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-179" value="Serve Page" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="560" y="1000" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xi-QjfqhYSJSX6jupqze-181" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-179" target="xi-QjfqhYSJSX6jupqze-179" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="600" y="1060" />
-              <mxPoint x="660" y="1060" />
-              <mxPoint x="660" y="1020" />
-            </Array>
-          </mxGeometry>
+          <mxGeometry x="820" y="480" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-186" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-182" target="xi-QjfqhYSJSX6jupqze-184" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -376,16 +352,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-190" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Create Sim800L location Thread&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="320" y="280" width="80" height="40" as="geometry" />
+          <mxGeometry x="320" y="240" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-193" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="460" y="220" width="360" height="210" as="geometry" />
+          <mxGeometry x="840" y="220" width="360" height="210" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-195" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-196" target="xi-QjfqhYSJSX6jupqze-201" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-196" value="Connect to Network" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="600" y="280" width="80" height="40" as="geometry" />
+          <mxGeometry x="980" y="280" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-223" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-201" target="xi-QjfqhYSJSX6jupqze-196" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -404,28 +380,28 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-201" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Is SIM connected to Network?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
-          <mxGeometry x="720" y="260" width="80" height="80" as="geometry" />
+          <mxGeometry x="1100" y="260" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-227" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xi-QjfqhYSJSX6jupqze-203" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="700" y="300" as="targetPoint" />
+            <mxPoint x="1080" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-203" value="Delay 30 sec" style="shape=delay;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="730" y="370" width="60" height="40" as="geometry" />
+          <mxGeometry x="1110" y="370" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-205" value="SIM800L Connection Thread" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ACA2FC;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="790" y="210" width="40" height="40" as="geometry" />
+          <mxGeometry x="1170" y="210" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-222" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-207" target="xi-QjfqhYSJSX6jupqze-196" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-207" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
-          <mxGeometry x="480" y="280" width="80" height="40" as="geometry" />
+          <mxGeometry x="860" y="280" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-238" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-142" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="680" as="targetPoint" />
+            <mxPoint x="360" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-254" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-143" target="xi-QjfqhYSJSX6jupqze-28" edge="1">
@@ -434,7 +410,7 @@
         <mxCell id="xi-QjfqhYSJSX6jupqze-255" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-94" target="xi-QjfqhYSJSX6jupqze-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="290" y="840" />
+              <mxPoint x="290" y="800" />
               <mxPoint x="290" y="140" />
             </Array>
           </mxGeometry>
@@ -447,7 +423,7 @@
         <mxCell id="xi-QjfqhYSJSX6jupqze-257" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-84" target="xi-QjfqhYSJSX6jupqze-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="300" y="480" />
+              <mxPoint x="300" y="440" />
               <mxPoint x="300" y="140" />
             </Array>
           </mxGeometry>
@@ -461,7 +437,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-261" value="Connect to MQTT Broker" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="560" y="800" width="80" height="40" as="geometry" />
+          <mxGeometry x="1000" y="790" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-262" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-266" target="xi-QjfqhYSJSX6jupqze-261" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -474,7 +450,7 @@
         <mxCell id="xi-QjfqhYSJSX6jupqze-272" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-266" target="xi-QjfqhYSJSX6jupqze-114" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="770" y="820" />
+              <mxPoint x="1210" y="810" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -484,24 +460,33 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-266" value="Is MQTT client connected to Broker?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
-          <mxGeometry x="680" y="780" width="80" height="80" as="geometry" />
+          <mxGeometry x="1120" y="770" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-274" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-268" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="660" y="820" as="targetPoint" />
+            <mxPoint x="1100" y="810" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-268" value="Delay 5 min" style="shape=delay;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="630" y="890" width="60" height="40" as="geometry" />
+          <mxGeometry x="1070" y="880" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-269" value="MQTT Connection Thread" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ACA2FC;strokeColor=#ACA2FC;" parent="1" vertex="1">
-          <mxGeometry x="800" y="730" width="40" height="40" as="geometry" />
+          <mxGeometry x="1240" y="720" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-270" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="xi-QjfqhYSJSX6jupqze-271" target="xi-QjfqhYSJSX6jupqze-261" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xi-QjfqhYSJSX6jupqze-271" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
-          <mxGeometry x="440" y="800" width="80" height="40" as="geometry" />
+          <mxGeometry x="880" y="790" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="U0A5DU-_MACA9M0HJrla-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xi-QjfqhYSJSX6jupqze-36" target="xi-QjfqhYSJSX6jupqze-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0A5DU-_MACA9M0HJrla-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="U0A5DU-_MACA9M0HJrla-2" target="xi-QjfqhYSJSX6jupqze-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U0A5DU-_MACA9M0HJrla-2" value="Create MQTT State Queue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="320" y="960" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
