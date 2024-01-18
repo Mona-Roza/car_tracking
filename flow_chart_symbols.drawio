@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2024-01-18T17:56:41.567Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="77eUyi04f4DAY3I1MkR-" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-18T17:58:28.577Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="9RdZlzAGGyApe2l1buRN" version="22.1.21" type="github">
   <diagram name="Page-1" id="e9KVWNwdquVDA6yy_A7A">
-    <mxGraphModel dx="1968" dy="1252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="895" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-40" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="440" y="560" width="360" height="480" as="geometry" />
+          <mxGeometry x="440" y="560" width="360" height="550" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="40" y="40" width="360" height="320" as="geometry" />
@@ -86,19 +86,19 @@
           <mxGeometry x="1040" y="180" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-32" value="Delay x" style="shape=delay;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="880.0899999999999" y="280" width="79.91" height="40" as="geometry" />
+          <mxGeometry x="40.08999999999992" y="1000" width="79.91" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-33" value="&lt;font face=&quot;Times New Roman&quot;&gt;X süre bekleme&amp;nbsp;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="980" y="280" width="90" height="40" as="geometry" />
+          <mxGeometry x="140" y="1000" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-35" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Power.svg;" parent="1" vertex="1">
-          <mxGeometry x="896.9699999999999" y="360" width="25.88" height="40" as="geometry" />
+          <mxGeometry x="56.969999999999914" y="1080" width="25.88" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-36" value="Power" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="880" y="360" width="60" height="30" as="geometry" />
+          <mxGeometry x="40" y="1080" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-37" value="&lt;font face=&quot;Times New Roman&quot;&gt;Güç&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="960" y="360" width="40" height="40" as="geometry" />
+          <mxGeometry x="120" y="1080" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-41" value="&lt;font face=&quot;Times New Roman&quot;&gt;Ok Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=#10739e;fillColor=#b1ddf0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="440" y="560" width="360" height="40" as="geometry" />
@@ -209,6 +209,15 @@
         </mxCell>
         <mxCell id="P_QqtkgcFS_5K-ustxrF-74" value="&lt;font face=&quot;Times New Roman&quot;&gt;Olay ele alan fonksiyon&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="710" y="450" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-77" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="1080" as="sourcePoint" />
+            <mxPoint x="560" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-78" value="&lt;font face=&quot;Times New Roman&quot;&gt;Event handler bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1040" width="160" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
