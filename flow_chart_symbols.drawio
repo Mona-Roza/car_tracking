@@ -1,17 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2024-01-18T17:52:49.477Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="xTX1vGawXtK9AdiuxzHi" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-18T17:56:41.567Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="77eUyi04f4DAY3I1MkR-" version="22.1.21" type="github">
   <diagram name="Page-1" id="e9KVWNwdquVDA6yy_A7A">
-    <mxGraphModel dx="1312" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1968" dy="1252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-40" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="440" y="480" width="360" height="480" as="geometry" />
+          <mxGeometry x="440" y="560" width="360" height="480" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="40" y="40" width="360" height="320" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="440" y="40" width="360" height="400" as="geometry" />
+          <mxGeometry x="440" y="40" width="360" height="480" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-1" value="Start Of Program" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="80" y="120" width="80.09" height="40" as="geometry" />
@@ -101,34 +101,34 @@
           <mxGeometry x="960" y="360" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-41" value="&lt;font face=&quot;Times New Roman&quot;&gt;Ok Sembolleri&lt;/font&gt;" style="text;html=1;strokeColor=#10739e;fillColor=#b1ddf0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="440" y="480" width="360" height="40" as="geometry" />
+          <mxGeometry x="440" y="560" width="360" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-42" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="760" as="sourcePoint" />
+            <mxPoint x="560" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-43" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="480" y="680" as="sourcePoint" />
             <mxPoint x="560" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-43" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="600" as="sourcePoint" />
-            <mxPoint x="560" y="560" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-44" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#ACA2FC;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480.09000000000015" y="760" as="sourcePoint" />
-            <mxPoint x="560.0900000000001" y="720" as="targetPoint" />
+            <mxPoint x="480.09000000000015" y="840" as="sourcePoint" />
+            <mxPoint x="560.0900000000001" y="800" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="tO7G1e2xOlgmxQVlNfmW-45" value="&lt;font face=&quot;Times New Roman&quot;&gt;Normal akış bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="560" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-46" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread başlatıcının yarattığı akış başlangıcını bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="600" y="640" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tO7G1e2xOlgmxQVlNfmW-47" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread&#39;ler arası bildirim fonksiyonu kullanımını bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-46" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread başlatıcının yarattığı akış başlangıcını bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="600" y="720" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tO7G1e2xOlgmxQVlNfmW-47" value="&lt;font face=&quot;Times New Roman&quot;&gt;Thread&#39;ler arası bildirim fonksiyonu kullanımını bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="600" y="800" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="kp1xGLvx3KV2O7zaA4pw-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
           <mxGeometry x="80.09" y="280" width="79.91" height="40" as="geometry" />
@@ -153,21 +153,21 @@
         </mxCell>
         <mxCell id="kp1xGLvx3KV2O7zaA4pw-12" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="840" as="sourcePoint" />
-            <mxPoint x="560" y="800" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="kp1xGLvx3KV2O7zaA4pw-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="480" y="920" as="sourcePoint" />
             <mxPoint x="560" y="880" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="kp1xGLvx3KV2O7zaA4pw-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.333;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="1000" as="sourcePoint" />
+            <mxPoint x="560" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="kp1xGLvx3KV2O7zaA4pw-14" value="Servis&#39;ler arası bildirim fonksiyonu kullanımını bildirir" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="800" width="160" height="40" as="geometry" />
+          <mxGeometry x="600" y="880" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="kp1xGLvx3KV2O7zaA4pw-15" value="&lt;font face=&quot;Times New Roman&quot;&gt;Servis başlatıcının yarattığı akış başlangıcını bildirir&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="880" width="160" height="40" as="geometry" />
+          <mxGeometry x="600" y="960" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="P_QqtkgcFS_5K-ustxrF-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="P_QqtkgcFS_5K-ustxrF-2" target="P_QqtkgcFS_5K-ustxrF-5">
           <mxGeometry relative="1" as="geometry" />
@@ -191,6 +191,24 @@
         </mxCell>
         <mxCell id="P_QqtkgcFS_5K-ustxrF-10" value="&lt;font face=&quot;Times New Roman&quot;&gt;Akış kontrolü sağlayan switch-case&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="200" y="790" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-39" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#fad7ac;" vertex="1" parent="1">
+          <mxGeometry x="455" y="420" width="245" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-45" value="Event Handler Function" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="680" y="410" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="P_QqtkgcFS_5K-ustxrF-47" target="P_QqtkgcFS_5K-ustxrF-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-47" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="480" y="440" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-70" value="End" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="600" y="440" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P_QqtkgcFS_5K-ustxrF-74" value="&lt;font face=&quot;Times New Roman&quot;&gt;Olay ele alan fonksiyon&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="450" width="70" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
