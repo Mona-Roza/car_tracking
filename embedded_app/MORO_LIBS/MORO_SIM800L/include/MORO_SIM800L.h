@@ -12,6 +12,7 @@ class MORO_SIM800L {
 
 	static esp_err_t deinit();
 
+	// Change uint8_t to uint64_t
 	static esp_err_t register_sim_card(const char *pin, uint8_t timeout_ms = 1000, uint8_t retry = 1);
 
 	static esp_err_t send_sms(const char *phone_number, const char *message, const char *callback = NULL, uint8_t timeout_ms = 0, uint8_t retry = 1);
