@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 240,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1420749281:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:554012591:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:865534929:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TrackingSystemWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TrackingSystemWeb\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-13T16:35:46.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "TrackingSystemWeb\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "TrackingSystemWeb\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-13T16:36:12.488Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 240,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
