@@ -26,6 +26,10 @@ body {
     color: #ffffff;
 }
 
+    body #map {
+        color: gray;
+    }
+
 a, .btn-link, .nav-link {
     color: #79a7ff; /* Açýk mavi link rengi, karanlýk temada daha iyi görünür */
 }

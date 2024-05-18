@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "107AZgjoJSSX5bisyRrntMWTHL6Fvz05q3Ho57vfLMfXxmh0tBejz5IJgvpiVUdcOQ233tP6IcEs7/wqxu8hHQ==",
+  "dgSpecHash": "5yzSAAkgewYjM0Q0R7wM0gaTnUqpngnk5pTendlU5dMxX3HStzmo4CftXFZGa4aj4IsTXLAQFBIVoMuKTJ0JtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\Core\\Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\musta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

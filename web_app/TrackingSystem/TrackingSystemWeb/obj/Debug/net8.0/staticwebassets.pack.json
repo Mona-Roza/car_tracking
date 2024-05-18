@@ -17,8 +17,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\serverconnection.cs",
-      "PackagePath": "staticwebassets\\js\\serverconnection.cs"
+      "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\maps.js",
+      "PackagePath": "staticwebassets\\js\\maps.js"
+    },
+    {
+      "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\mapsTheme.js",
+      "PackagePath": "staticwebassets\\js\\mapsTheme.js"
+    },
+    {
+      "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\serverConnection.js",
+      "PackagePath": "staticwebassets\\js\\serverConnection.js"
     },
     {
       "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\js\\site.js",

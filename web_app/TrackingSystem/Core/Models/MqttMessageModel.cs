@@ -1,14 +1,14 @@
 ﻿namespace Core.Models
 {
-    public class MqttMessageModel : EventArgs
+    public class MqttMessageModel : BaseEntity
     {
-        public string MessagePayload { get; set; }
-        public string Topic { get; set; }
-
         public MqttMessageModel(string topic, string messagePayload)
         {
             Topic = topic;
             MessagePayload = messagePayload;
         }
+
+        public string MessagePayload { get; set; }
+        public string Topic { get; set; }
     }
 }

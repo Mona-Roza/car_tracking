@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Service.MqttMessageManager
 {
-    public class MqttClientService : IAsyncDisposable
+    public class MqttClientService
     {
         private readonly IMqttClient mqttClient;
         private readonly MqttClientOptions options;
@@ -21,6 +21,7 @@ namespace Service.MqttMessageManager
 
             var mqttFactory = new MqttFactory();
             mqttClient = mqttFactory.CreateMqttClient();
+
             options = new MqttClientOptionsBuilder()
             .WithTcpServer(Server, Port)
             .WithTls(new MqttClientOptionsBuilderTlsParameters
@@ -61,15 +62,6 @@ namespace Service.MqttMessageManager
                 OnMessageReceived?.Invoke(this, messageEvent);
                 return Task.CompletedTask;
             };
-        }
-
-        public async ValueTask DisposeAsync()
-        {
-            if (mqttClient.IsConnected)
-            {
-                await mqttClient.DisconnectAsync();
-                mqttClient.Dispose();
-            }
         }
     }
 }

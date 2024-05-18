@@ -10,6 +10,7 @@ namespace TrackingSystemWeb.Hubs
 
         public async Task SendName(LocationModel location)
         {
+            //location.Timestamp.ToString("yyyy-MM-ddTHH:mm:ss");
             locations.Add(location);
             Console.WriteLine("Latitude:" + location.Latitude + " / Longitude:" + location.Longitude + " / Date:" + location.Timestamp);
             await Clients.All.SendAsync("ReceiveName", location);

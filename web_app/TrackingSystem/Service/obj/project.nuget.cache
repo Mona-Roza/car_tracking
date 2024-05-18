@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "i/+AZTXn+H949KvRyliLJpCWWQ7Gpi5LUuOD4ko8jYB1oLseOA1M09YceOnbdc/vhnb7G0vqgZhV6FFf3dcwjw==",
+  "dgSpecHash": "pqHyL9Hy0sqNGzDyuS8+92KYon1VkrVUSYGE71/U04uUL/N01608S++zJMP841MkVKfEjUbg5ab+DQucCXcJuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\Service\\Service.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\musta\\.nuget\\packages\\mqttnet\\4.3.3.952\\mqttnet.4.3.3.952.nupkg.sha512",
+    "C:\\Users\\musta\\.nuget\\packages\\mqttnet\\4.3.4.1084\\mqttnet.4.3.4.1084.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
