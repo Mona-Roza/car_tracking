@@ -28,6 +28,14 @@ export function initMap (latData = 41.1082, lngData = 28.9784) {
     })
 }
 
+var apikey = 'AIzaSyDQlZlLgO2Luut0trOyN7ESj170hGUcV6Q'
+export function loadScript () {
+    var script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=' + apikey + '&callback=initMap&loading=async'
+    document.body.appendChild(script)
+}
+
 export function updateMap (lat, lng, newTime) { //update maps
     time = newTime
     var newLatLng = new google.maps.LatLng(lat, lng)

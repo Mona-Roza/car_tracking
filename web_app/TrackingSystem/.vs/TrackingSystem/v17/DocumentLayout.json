@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\controllers\\temacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\controllers\\temacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 240,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,6 +71,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TemaController.cs",
+              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Controllers\\TemaController.cs",
+              "RelativeDocumentMoniker": "TrackingSystemWeb\\Controllers\\TemaController.cs",
+              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Controllers\\TemaController.cs",
+              "RelativeToolTip": "TrackingSystemWeb\\Controllers\\TemaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T18:14:23.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-19T13:48:30.032Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -22,8 +22,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxNYXBzUGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Maps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXBzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Privacy.cshtml]
@@ -34,8 +34,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Error401.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yNDAxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yNDA0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Error500.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yNTAwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Charts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxDaGFydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Layout_sidenav_light.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxMYXlvdXRfc2lkZW5hdl9saWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Layout_static.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxMYXlvdXRfc3RhdGljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxUYWJsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/_ViewImports.cshtml]
