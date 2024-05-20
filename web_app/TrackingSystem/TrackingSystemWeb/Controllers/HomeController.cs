@@ -13,7 +13,7 @@ namespace TrackingSystemWeb.Controllers
             _logger = logger;
         }
 
-        public IActionResult Maps()
+        public IActionResult Index()
         {
             return View();
         }

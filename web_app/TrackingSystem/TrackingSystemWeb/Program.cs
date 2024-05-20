@@ -44,7 +44,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Maps}/{id?}");
+    pattern: "{controller=Home}/{action=Privacy}/{id?}");
 
 app.MapHub<LocationHub>("/LocationHub");
 

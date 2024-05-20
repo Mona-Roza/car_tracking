@@ -7,20 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Tema\Index.cshtml" />
+    <Content Remove="Views\Err\Err401.cshtml" />
+    <Content Remove="Views\Err\Err404.cshtml" />
+    <Content Remove="Views\Err\Err500.cshtml" />
+    <Content Remove="Views\Tema\Lazz.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Shared\Error401.cshtml" />
-    <None Include="Views\Shared\Error404.cshtml" />
-    <None Include="Views\Shared\Error500.cshtml" />
+    <None Include="Views\Err\Err401.cshtml" />
+    <None Include="Views\Err\Err404.cshtml" />
+    <None Include="Views\Err\Err500.cshtml" />
     <None Include="Views\Tema\Charts.cshtml" />
-    <None Include="Views\Tema\Index.cshtml" />
-    <None Include="Views\Tema\Layout_sidenav_light.cshtml" />
-    <None Include="Views\Tema\Layout_static.cshtml" />
-    <None Include="Views\Shared\Login.cshtml" />
-    <None Include="Views\Shared\Password.cshtml" />
-    <None Include="Views\Shared\Register.cshtml" />
+    <None Include="wwwroot\oldDocument\Layout_sidenav_light.cshtml" />
+    <None Include="wwwroot\oldDocument\Layout_static.cshtml" />
+    <None Include="Views\User\Login.cshtml" />
+    <None Include="Views\User\Password.cshtml" />
+    <None Include="Views\User\Register.cshtml" />
     <None Include="Views\Tema\Tables.cshtml" />
     <None Include="wwwroot\css\old\defaultStyles.css" />
     <None Include="wwwroot\css\old\site.css" />

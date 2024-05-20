@@ -30,6 +30,7 @@ C:\Users\musta\source\repos\TrackingSystem\TrackingSystemWeb\obj\Debug\net8.0\Tr
 C:\Users\musta\source\repos\TrackingSystem\TrackingSystemWeb\obj\Debug\net8.0\ref\TrackingSystemWeb.dll
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\appsettings.json
+C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\libman.json
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\TrackingSystemWeb.staticwebassets.runtime.json
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\TrackingSystemWeb.exe
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\TrackingSystemWeb.deps.json
@@ -37,6 +38,7 @@ C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWe
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\TrackingSystemWeb.dll
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\TrackingSystemWeb.pdb
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\MQTTnet.dll
+C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\Core.dll
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\Service.dll
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\Service.pdb
@@ -66,5 +68,3 @@ C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWe
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\obj\Debug\net8.0\TrackingSystemWeb.pdb
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\obj\Debug\net8.0\TrackingSystemWeb.genruntimeconfig.cache
 C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\obj\Debug\net8.0\ref\TrackingSystemWeb.dll
-C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\libman.json
-C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\bin\Debug\net8.0\Newtonsoft.Json.dll
