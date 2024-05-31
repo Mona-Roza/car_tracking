@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Service.DAL;
 using Service.JsonService;
 using Service.MqttMessageManager;
@@ -6,13 +7,29 @@ using TrackingSystemWeb.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
 builder.Services.AddSingleton<MqttClientService>();
 builder.Services.AddSingleton<MqttDal>();
 builder.Services.AddSingleton<JsonDeserialize>();
 builder.Services.AddSingleton<LocationHub>();
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+    options.AccessDeniedPath = "/Home/AccessDenied";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SameSite = SameSiteMode.Strict;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    options.Cookie.Name = "ProductClientAppJwt";
+    //options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    //options.SlidingExpiration = true;
+});
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 builder.Services.AddHostedService<MqttClientAPI>();
 
@@ -40,11 +57,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Privacy}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapHub<LocationHub>("/LocationHub");
 

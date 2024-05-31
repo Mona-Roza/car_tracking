@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|c:\\users\\musta\\source\\repos\\car_tracking\\web_app\\trackingsystem\\trackingsystemweb\\views\\err\\err401.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{45C5DEA9-863D-4505-BAE5-37420CAA5501}|TrackingSystemWeb\\TrackingSystemWeb.csproj|solutionrelative:trackingsystemweb\\views\\err\\err401.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 252,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,45 +62,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "TrackingSystemWeb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAD4AAAAAAAAAAIAwwFgAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T18:12:29.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Err401.cshtml",
-              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Err\\Err401.cshtml",
-              "RelativeDocumentMoniker": "TrackingSystemWeb\\Views\\Err\\Err401.cshtml",
-              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Views\\Err\\Err401.cshtml",
-              "RelativeToolTip": "TrackingSystemWeb\\Views\\Err\\Err401.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T18:11:40.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ErrorController.cs",
-              "DocumentMoniker": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Controllers\\ErrorController.cs",
-              "RelativeDocumentMoniker": "TrackingSystemWeb\\Controllers\\ErrorController.cs",
-              "ToolTip": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\Controllers\\ErrorController.cs",
-              "RelativeToolTip": "TrackingSystemWeb\\Controllers\\ErrorController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T18:10:26.347Z",
-              "EditorCaption": ""
             }
           ]
         },

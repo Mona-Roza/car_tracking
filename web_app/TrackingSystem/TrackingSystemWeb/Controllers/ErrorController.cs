@@ -2,19 +2,19 @@
 
 namespace TrackingSystemWeb.Controllers
 {
-    public class ErrController : BaseController
+    public class ErrorController : BaseController
     {
-        public IActionResult Err401()
+        public IActionResult Error401()
         {
             return View();
         }
 
-        public IActionResult Err404()
+        public IActionResult Error404()
         {
             return View();
         }
 
-        public IActionResult Err500()
+        public IActionResult Error500()
         {
             return View();
         }

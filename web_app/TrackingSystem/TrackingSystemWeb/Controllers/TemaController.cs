@@ -13,5 +13,15 @@ namespace TrackingSystemWeb.Controllers
         {
             return View();
         }
+
+        public IActionResult Chart()
+        {
+            return View();
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
 }

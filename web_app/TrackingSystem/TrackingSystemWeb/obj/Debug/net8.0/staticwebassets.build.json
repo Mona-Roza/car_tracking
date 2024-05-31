@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sFawmdJbS68ALZxrPHF0Mbbt9YQ8FmEGeZ49eOR7qFU=",
+  "Hash": "tC6d6vtVKz7klyN1MsO5YTz0sRdzof4Ebs+0EGfvUVM=",
   "Source": "TrackingSystemWeb",
   "BasePath": "_content/TrackingSystemWeb",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Identity": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\css\\account.css",
+      "SourceId": "TrackingSystemWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\",
+      "BasePath": "_content/TrackingSystemWeb",
+      "RelativePath": "css/account.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\account.css"
     },
     {
       "Identity": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\css\\old\\defaultStyles.css",

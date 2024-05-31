@@ -1,0 +1,26 @@
+@{
+    Layout = "_AccountLayout";
+}
+@model LoginViewModel
+
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+
+<form asp-controller="Account" asp-action="Login" method="post">
+    <h3>Login Here</h3>
+
+    <label for="email">Email</label>
+    <input asp-for="Email" type="email" placeholder="Email" id="email">
+
+    <label for="password">Password</label>
+    <input asp-for="Password" type="password" placeholder="Password" id="password">
+
+    <button type="submit">Log In</button>
+
+    <div class="social">
+        <a asp-controller="Account" asp-action="ForgotPassword">Forgot Password</a>
+        <a class="second" asp-controller="Account" asp-action="Register">Register</a>
+    </div>
+</form>

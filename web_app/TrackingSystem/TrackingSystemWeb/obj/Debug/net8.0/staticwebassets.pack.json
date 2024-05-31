@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\error-404-monochrome.svg"
     },
     {
+      "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
       "Id": "C:\\Users\\musta\\source\\repos\\car_tracking\\web_app\\TrackingSystem\\TrackingSystemWeb\\wwwroot\\css\\old\\defaultStyles.css",
       "PackagePath": "staticwebassets\\css\\old\\defaultStyles.css"
     },
