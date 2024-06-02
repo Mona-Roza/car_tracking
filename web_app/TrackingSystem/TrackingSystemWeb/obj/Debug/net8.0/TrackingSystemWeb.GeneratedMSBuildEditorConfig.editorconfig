@@ -50,12 +50,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxfTWFwc1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Charts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYWJsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Error.cshtml]
@@ -80,18 +88,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Charts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxDaGFydHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Tema/Tables.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYVxUYWJsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/_ViewImports.cshtml]

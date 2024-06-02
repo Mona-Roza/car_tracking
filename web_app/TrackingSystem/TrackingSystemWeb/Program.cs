@@ -4,6 +4,7 @@ using Service.JsonService;
 using Service.MqttMessageManager;
 using TrackingSystemWeb.BackgroundServices;
 using TrackingSystemWeb.Hubs;
+using TrackingSystemWeb.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddSingleton<MqttClientService>();
 builder.Services.AddSingleton<MqttDal>();
 builder.Services.AddSingleton<JsonDeserialize>();
 builder.Services.AddSingleton<LocationHub>();
+builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, options =>
 {

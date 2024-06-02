@@ -36,6 +36,7 @@ namespace TrackingSystemAPI.Controllers
                 FullName = model.FullName,
                 UserName = model.UserName,
                 Email = model.Email,
+                PhoneNumber = model.PhoneNumber,
                 DataAdded = DateTime.Now
             };
             var result = await _userManager.CreateAsync(user, model.Password);

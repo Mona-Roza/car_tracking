@@ -1,13 +1,14 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+﻿using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 
 namespace Core.Models
 {
     public class BaseEntity
     {
         //public int Id { get; set; }
-        [JsonConverter(typeof(CustomDateTimeConverter))]
-        public DateTime Timestamp { get; set; } = DateTime.Now;
+        [JsonPropertyName("timestamp")]
+        [Newtonsoft.Json.JsonConverter(typeof(CustomDateTimeConverter))]
+        public DateTime Timestamp { get; set; }
     }
 }
 

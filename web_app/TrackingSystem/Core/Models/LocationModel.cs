@@ -1,9 +1,13 @@
-﻿namespace Core.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Core.Models
 {
     public class LocationModel : BaseEntity
     {
-        public string Latitude { get; set; }
+        [JsonPropertyName("latitude")]
+        public decimal Latitude { get; set; }
 
-        public string Longitude { get; set; }
+        [JsonPropertyName("longitude")]
+        public decimal Longitude { get; set; }
     }
 }
