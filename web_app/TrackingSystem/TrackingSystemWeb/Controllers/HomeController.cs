@@ -24,29 +24,17 @@ namespace TrackingSystemWeb.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public async Task<IActionResult> Privacy()
-        {
-            var locations = new List<LocationModel>();
-
             var token = User.Claims.FirstOrDefault(x => x.Type == "JWToken")?.Value;
             if (token == null)
             {
                 return RedirectToAction("Login", "Account");
             }
-            using (var httpClient = new HttpClient())
-            {
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                using (var response = await httpClient.GetAsync("http://localhost:5278/api/Location"))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    locations = JsonSerializer.Deserialize<List<LocationModel>>(apiResponse);
-                }
-            }
-            var locationViewModels = _mapper.Map<List<LocationsViewModel>>(locations.ToList());
-            return View(locationViewModels);
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
         }
 
         public IActionResult Tables()
@@ -57,6 +45,25 @@ namespace TrackingSystemWeb.Controllers
         public IActionResult Charts()
         {
             return View();
+        }
+
+        [HttpGet]
+        public async Task<JsonResult> GetLocationHistory()
+        {
+            var locations = new List<LocationModel>();
+            var token = User.Claims.FirstOrDefault(x => x.Type == "JWToken")?.Value;
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                using (var response = await httpClient.GetAsync("http://localhost:5278/api/Location"))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    locations = JsonSerializer.Deserialize<List<LocationModel>>(apiResponse);
+                }
+            }
+            var locationViewModels = _mapper.Map<List<LocationsViewModel>>(locations.ToList());
+            return Json(locationViewModels);
         }
     }
 }
