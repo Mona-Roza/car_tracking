@@ -35,11 +35,9 @@ export function serverConnection () {
             $("#clientCount").text(clientCount)
         })
         connection.on("ReceiveName", (lokasyon) => {
-            var time = moment(lokasyon.timestamp).format('YYYY-MM-DD T HH:mm:ss')
-            console.log(time)
-            var lat = parseFloat(lokasyon.latitude)
-            var lng = parseFloat(lokasyon.longitude)
-            updateMap(lat, lng, time)
+            //var time = moment(lokasyon.timestamp).format('YYYY-MM-DD T HH:mm:ss')
+            //console.log(time)
+            updateMap(lokasyon)
         })
     }
 }
