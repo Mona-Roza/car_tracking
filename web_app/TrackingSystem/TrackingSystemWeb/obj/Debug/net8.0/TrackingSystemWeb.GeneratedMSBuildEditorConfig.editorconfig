@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TrackingSystemWeb
+build_property.RootNamespace = TrackingSystemWeb
+build_property.ProjectDir = C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\musta\source\repos\car_tracking\web_app\TrackingSystem\TrackingSystemWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/wwwroot/oldDocument/Layout_sidenav_light.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxvbGREb2N1bWVudFxMYXlvdXRfc2lkZW5hdl9saWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/wwwroot/oldDocument/Layout_static.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxvbGREb2N1bWVudFxMYXlvdXRfc3RhdGljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/wwwroot/oldDocument/Maps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxvbGREb2N1bWVudFxNYXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/wwwroot/oldDocument/oldNavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxvbGREb2N1bWVudFxvbGROYXZCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Default/_MapsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxfTWFwc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Charts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Home/Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Partial/_SideNavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcX1NpZGVOYXZCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/Partial/_TopNavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcX1RvcE5hdkJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/_AccountLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY2NvdW50TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/_ErrorLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcnJvckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/musta/source/repos/car_tracking/web_app/TrackingSystem/TrackingSystemWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jqecfeklch
