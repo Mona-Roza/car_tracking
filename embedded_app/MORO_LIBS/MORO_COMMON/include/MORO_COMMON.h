@@ -1,149 +1,98 @@
 #ifndef _MORO_COMMON_H_
 #define _MORO_COMMON_H_
 
+#include <inttypes.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
-
-#include <map>
-#include <string>
-#include <vector>
+#include <stdlib.h>
+#include <string.h>
 
 #include "cJSON.h"
-#include "driver/gpio.h"
-#include "driver/uart.h"
-#include "esp_cpu.h"
+#include "dirent.h"
 #include "esp_efuse.h"
 #include "esp_efuse_table.h"
+#include "esp_err.h"
+#include "esp_event.h"
 #include "esp_log.h"
 #include "esp_mac.h"
+#include "esp_random.h"
 #include "esp_rom_efuse.h"
+#include "esp_spiffs.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
 #include "freertos/portmacro.h"
 #include "freertos/semphr.h"  // Include the semaphore definitions
 #include "freertos/task.h"	  // Include the task definitions
-#include "lwip/err.h"
-#include "lwip/sys.h"
 #include "sdkconfig.h"
-
-/*
-	If you want to use main in C++ you have to use
-	extern "C" to prevent name mangling.
-*/
+#ifdef __cplusplus
 extern "C" {
-void app_main(void);
-}
-
-//========================== MORO_LOG ==========================
-typedef int (*printf_function_t)(const char*, va_list);
-int moro_printf(const char* format, ...);
-int moro_log_write(uint8_t log_level_macro, const char* format, ...);
-void moro_printf_list(const uint8_t* c, int len, const char* format, const char* start, const char* sep, const char* end);
-
-void moro_log_set_level(uint8_t log_level_macro);
-uint8_t moro_log_get_level();
-void forward_esp_log_to_moro_printf();
-
-printf_function_t change_printf_function(printf_function_t ptr);
-void reset_printf_function();
-bool add_printf_function(printf_function_t ptr);
-bool remove_printf_function(printf_function_t ptr);
-void reset_esp_log_printf();
-
-#define ANSI_COLOR_BLACK "\033[1;30m"	 // 000
-#define ANSI_COLOR_RED "\033[1;31m"		 // 100
-#define ANSI_COLOR_GREEN "\033[1;32m"	 // 010
-#define ANSI_COLOR_YELLOW "\033[1;33m"	 // 011
-#define ANSI_COLOR_BLUE "\033[1;34m"	 // 001
-#define ANSI_COLOR_MAGENTA "\033[1;35m"	 // 101
-#define ANSI_COLOR_CYAN "\033[1;36m"	 // 011
-#define ANSI_COLOR_WHITE "\033[1;37m"	 // 111
-#define ANSI_COLOR_RESET "\033[0m"		 // 0
-
-#define MORO_LOG_LEVEL_NONE 0
-#define MORO_LOG_LEVEL_ERROR 1
-#define MORO_LOG_LEVEL_WARNING 2
-#define MORO_LOG_LEVEL_INFO 3
-#define MORO_LOG_LEVEL_DEBUG 4
-#define MORO_LOG_LEVEL_VERBOSE 5
-
-#define MORO_LOG_NO_COLOR 0
-#define MORO_LOG_COLORED 1
-
-#ifdef CONFIG_MORO_LOG_LEVEL
-#define MORO_LOG_LEVEL CONFIG_MORO_LOG_LEVEL
-#else
-#define MORO_LOG_LEVEL MORO_LOG_LEVEL_NONE
 #endif
 
-#ifdef CONFIG_MORO_LOG_COLOR_LEVEL
-#define MORO_LOG_COLOR_LEVEL CONFIG_MORO_LOG_COLOR_LEVEL
-#else
-#define MORO_LOG_COLOR_LEVEL MORO_LOG_NO_COLOR
-#endif
+// ================= LLIST =================
+struct node {
+	void *data;
+	struct node *next;
+};
 
-#if MORO_LOG_COLOR_LEVEL >= MORO_LOG_COLORED
-#define MORO_LOGFORMATDETAILED(color, logchar, tmstamp, format) color "[%c:%u][%s:%u %s()]:" format "\n" ANSI_COLOR_RESET, logchar, tmstamp, __FILE__, __LINE__, __FUNCTION__
+typedef struct node *llist;
 
-#define MORO_LOGFORMATSIMPLE(color, logchar, tmstamp, format) color "[%c:%u]" format "\n" ANSI_COLOR_RESET, logchar, tmstamp
-#else
-#define MORO_LOGFORMATDETAILED(color, logchar, tmstamp, format) "[%c:%u][%s:%u %s()]:" format "\n", logchar, tmstamp, __FILE__, __LINE__, __FUNCTION__
-#define MORO_LOGFORMATSIMPLE(color, logchar, tmstamp, format) "[%c:%u]" format "\n", logchar, tmstamp
-#endif
+/* llist_create: Create a linked list */
+llist *llist_create(void *data);
 
-#if MORO_LOG_LEVEL >= MORO_LOG_LEVEL_ERROR
-#define MORO_LOGE(format, ...) moro_log_write(MORO_LOG_LEVEL_ERROR, MORO_LOGFORMATDETAILED(ANSI_COLOR_RED, 'E', esp_log_timestamp(), format), ##__VA_ARGS__)
-#else
-#define MORO_LOGE(format, ...)
-#endif
+/* llist_free: Free a linked list */
+void llist_free(llist *list);
 
-#if MORO_LOG_LEVEL >= MORO_LOG_LEVEL_WARNING
-#define MORO_LOGW(format, ...) moro_log_write(MORO_LOG_LEVEL_WARNING, MORO_LOGFORMATDETAILED(ANSI_COLOR_YELLOW, 'W', esp_log_timestamp(), format), ##__VA_ARGS__)
-#else
-#define MORO_LOGW(format, ...)
-#endif
+/* llist_add_inorder: Add to sorted linked list */
+int llist_add_inorder(void *data, llist *list,
+					  int (*comp)(void *, void *));
 
-#if MORO_LOG_LEVEL >= MORO_LOG_LEVEL_INFO
-#define MORO_LOGI(format, ...) moro_log_write(MORO_LOG_LEVEL_INFO, MORO_LOGFORMATDETAILED(ANSI_COLOR_GREEN, 'I', esp_log_timestamp(), format), ##__VA_ARGS__)
-#else
-#define MORO_LOGI(format, ...)
-#endif
+/* llist_push: Add to head of list */
+void llist_push(llist *list, void *data);
 
-#if MORO_LOG_LEVEL >= MORO_LOG_LEVEL_DEBUG
-#define MORO_LOGD(format, ...) moro_log_write(MORO_LOG_LEVEL_DEBUG, MORO_LOGFORMATDETAILED(ANSI_COLOR_MAGENTA, 'D', esp_log_timestamp(), format), ##__VA_ARGS__)
-#else
-#define MORO_LOGD(format, ...)
-#define _MORO_LOGD(format, ...)
-#endif
+/* llist_pop: remove and return head of linked list */
+void *llist_pop(llist *list);
 
-#if MORO_LOG_LEVEL >= MORO_LOG_LEVEL_VERBOSE
-#define MORO_LOGV(format, ...) moro_log_write(MORO_LOG_LEVEL_VERBOSE, MORO_LOGFORMATDETAILED(ANSI_COLOR_WHITE, 'V', esp_log_timestamp(), format), ##__VA_ARGS__)
-#else
-#define MORO_LOGV(format, ...)
-#endif
-//=============================================================
+/* llist_print: print linked list */
+void llist_print(llist *list, void (*print)(void *data));
 
-// ========================== UTILS ===========================
+int llist_size(llist *list);
 
-std::vector<std::string> split(const char* str, char delimiter);
+struct node *llist_get(llist *list, int index);
 
-bool wildcard_match(const char* pattern, const char* value);
+void llist_remove(llist *list, int index);
+
+//================================================
+
+// ================= UTILS =================
+
+bool wildcard_match(const char *pattern, const char *value);
+
+void url_encoder(char *buf, const char *input);
+
+#define moro_abort_if_true(x, reason_str, ...)                      \
+	if (x) {                                                        \
+		ESP_LOGE("MORO_COMMON", "%s <<<<<%s>>>>>", #x, reason_str); \
+		assert(!x);                                                 \
+	}
+
+// =========================================
+
+esp_err_t init_spiffs(const char *base_path, const char *partition_label);
+
+void list_all_files(const char *file_path);
 
 typedef struct {
 	uint8_t mac[6];
 	char mac_str[18];
+
 } moro_mac_t;
 
-/*
-	esp_tool.py --chip esp32 efuse dump | grep MAC
-	esp_tool.py --chip esp32 efuse read_mac
-*/
-esp_err_t get_efuse_mac(moro_mac_t* ef_mac);
+esp_err_t read_mac(moro_mac_t *mac);
 
-esp_err_t get_wifi_mac(moro_mac_t* wi_mac);
+#ifdef __cplusplus
+}
+#endif
 
-//=============================================================
-
-#endif /* _MORO_COMMON_H_ */
+#endif	// _MORO_COMMON_H_

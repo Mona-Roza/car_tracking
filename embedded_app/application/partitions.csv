@@ -1,11 +1,11 @@
 # Name,     Type,   SubType,    Offset,     Size,     Flags
-nvs, data, nvs, 0x9000, 0x24000
-nvs_key, data, nvs_keys, 0x2D000, 0x1000
-phy_init, data, phy, 0x2E000, 0x1000
-ota_data, data, ota, 0x2F000, 0x2000
-ota_0, app, ota_0, 0x40000, 0x17D000
-ota_1, app, ota_1, 0x1C0000, 0x17D000
-files, data, 0x82, 0x33D000, 0xC3000
+nvs,        data,   nvs,        0x9000,     0x24000
+nvs_key,    data,   nvs_keys,   0x2D000,    0x1000
+phy_init,   data,   phy,        0x2E000,    0x1000
+ota_data,   data,   ota,        0x2F000,    0x2000
+ota_0,      app,    ota_0,      0x40000,    0x17D000
+ota_1,      app,    ota_1,      0x1C0000,   0x17D000
+files,      data,   0x82,     0x33D000,   0xC3000
 
 
 # DO NOT CHANGE PARTITION TABLE !!!

@@ -4,47 +4,28 @@
 #include "MORO_COMMON.h"
 #include "driver/gpio.h"
 #include "driver/uart.h"
-#include "esp_timer.h"
+#include "esp_modem_api.h"
+#include "esp_modem_c_api_types.h"
+#include "esp_modem_config.h"
+#include "esp_modem_dce_config.h"
+#include "esp_netif.h"
+#include "esp_netif_defaults.h"
+#include "esp_netif_ppp.h"
+#include "lwip/err.h"
+#include "lwip/sys.h"
 
-class MORO_SIM800L {
-   public:
-	static esp_err_t init(gpio_num_t tx, gpio_num_t rx, int buff_size, int baud_rate, char *pin = NULL);
+#define MORO_SIM800L_TAG "MORO_SIM800L"
 
-	static esp_err_t deinit();
+esp_err_t moro_sim800l_init(gpio_num_t uart_tx, gpio_num_t uart_rx, uint32_t uart_rx_buffer_size, uint32_t uart_tx_buffer_size, uint32_t uart_event_queue_size, uint32_t uart_event_task_stack_size, uint32_t uart_event_task_priority);
 
-	// Change uint8_t to uint64_t
-	static esp_err_t register_sim_card(const char *pin, uint8_t timeout_ms = 1000, uint8_t retry = 1);
+esp_err_t moro_sim800l_get_signal_quality(int *rssi, int *ber);
 
-	static esp_err_t send_sms(const char *phone_number, const char *message, const char *callback = NULL, uint8_t timeout_ms = 0, uint8_t retry = 1);
+esp_err_t moro_sim800l_set_data_mode();
 
-	static esp_err_t read_sms(uint8_t index, char *phone_number, char *message, uint8_t timeout_ms = 0, uint8_t retry = 1);
+void moro_sim800l_get_connected_ip(esp_ip4_addr_t *ip);
 
-	static esp_err_t delete_sms(uint8_t index, uint8_t timeout_ms = 0, uint8_t retry = 1);
+esp_err_t moro_sim800l_send_sms(const char *phone_number, const char *message);
 
-	static esp_err_t call(const char *phone_number, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t hang_up(uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_signal_quality(uint8_t *rssi, uint8_t *ber, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_operator_name(char *operator_name, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_battery_voltage(uint16_t *voltage, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_location(char *latitude, char *longitude, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_time(char *time, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_network_status(uint8_t *status, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_network_time_zone(char *time_zone, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-	static esp_err_t get_network_time(char *time, uint8_t timeout_ms = 0, uint8_t retry = 1);
-
-   private:
-	static esp_err_t send_command(const char *command, const char *callback, int timeout_ms = 0, uint8_t retry = 1, char *response = NULL, uint8_t response_size = 0, uint8_t *response_len = NULL, uint8_t *response_index = NULL);
-};
-
-extern MORO_SIM800L *MORO_SIM800L;
+esp_err_t moro_sim800l_get_location(float *latitude, float *longitude);
 
 #endif /* _MORO_SIM800L_H_ */
