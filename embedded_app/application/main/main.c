@@ -13,11 +13,6 @@
 #define UART_EVENT_TASK_STACK_SIZE 2048
 #define UART_EVENT_TASK_PRIORITY 5
 
-#define SPIFFS_BASE_PATH "/files"
-#define SPIFFS_PARTITION_LABEL "files"
-
-#define MQTT_CONFIGURATIONS_FILE_PATH "/files/mqtt_configurations.json"
-
 // define TAG for logging
 static const char* MAIN_TAG = "main";
 
@@ -26,162 +21,84 @@ mqtt_configurations_t mqtt_configurations;
 #define MORO_MQTT_BASE_TOPIC "monaroza"
 
 moro_mac_t moro_mac;
+/*
+ EMBED_TXTFILES
+						"../embedded_certs/ca.pem"
+						"../embedded_certs/cert.crt"
+						"../embedded_certs/private.key"
+*/
+
+extern const uint8_t ca_pem_start[] asm("_binary_ca_pem_start");
+extern const uint8_t ca_pem_end[] asm("_binary_ca_pem_end");
+
+extern const uint8_t cert_crt_start[] asm("_binary_cert_crt_start");
+extern const uint8_t cert_crt_end[] asm("_binary_cert_crt_end");
+
+extern const uint8_t private_key_start[] asm("_binary_private_key_start");
+extern const uint8_t private_key_end[] asm("_binary_private_key_end");
 
 void prepare_mqtt_configurations() {
 	char last_will_topic[128] = {0};
 
 	//--------------------------- MQTT Configurations --------------------------
 	/*
-	 * mqtt_configurations.json file content:
-	 *   {
-	 *        "endpoint":     " ",
-	 *        "auth_type":    "certificate",
-	 *        "username":     " ",
-	 *        "password":     " ",
-	 *        "ca_cert":      null,
-	 *        "ca_cert_size": 0,
-	 *        "client_cert":  null,
-	 *        "client_cert_size":     0,
-	 *        "client_key":   null,
-	 *        "client_key_size":      0,
-	 *        "device_mac":   "B4:8A:0A:62:A7:44",
-	 *        "last_will_topic":      "platform/B4:8A:0A:62:A7:44/last_will_topic",
-	 *   }
+		mqtt_configurations
+		typedef struct {
+			char endpoint[128];
+			char auth_type[25];	 // can be basic, certificate or basic_and_certificate
+			char username[128];
+			char password[128];
+
+			char* ca_cert;
+			size_t ca_cert_size;
+
+			char* client_cert;
+			size_t client_cert_size;
+
+			char* client_key;
+			size_t client_key_size;
+
+			char device_mac[18];
+			char last_will_topic[128];
+		} mqtt_configurations_t;
 	 */
-	const char* mqtt_configurations_file_path = MQTT_CONFIGURATIONS_FILE_PATH;
-	struct stat mqtt_file_stats;
 
-	if (stat(mqtt_configurations_file_path, &mqtt_file_stats) == 0) {
-		ESP_LOGI(MAIN_TAG, "mqtt_configurations.json file found.");
+	strcpy(mqtt_configurations.endpoint, "mqtts://an726pjx0w8v9-ats.iot.eu-north-1.amazonaws.com:8883");
+	strcpy(mqtt_configurations.auth_type, MQTT_AUTH_TYPE_CERTIFICATE);
 
-		// read the file content
-		int fd = open(mqtt_configurations_file_path, O_RDONLY);
-		moro_abort_if_true((fd < 0), "Failed to open mqtt_configurations.json file. [%d] Aborting.", fd);
+	// set ca certificate
+	mqtt_configurations.ca_cert		 = (char*)ca_pem_start;
+	mqtt_configurations.ca_cert_size = ca_pem_end - ca_pem_start;
 
-		char* buffer = (char*)malloc(mqtt_file_stats.st_size);
-		read(fd, buffer, mqtt_file_stats.st_size);
+	// set client certificate
+	mqtt_configurations.client_cert		 = (char*)cert_crt_start;
+	mqtt_configurations.client_cert_size = cert_crt_end - cert_crt_start;
 
-		// parse the file content
-		cJSON* mqtt_configurations_json = cJSON_Parse(buffer);
+	// set client key
+	mqtt_configurations.client_key		= (char*)private_key_start;
+	mqtt_configurations.client_key_size = private_key_end - private_key_start;
 
-		sprintf(mqtt_configurations.endpoint, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "endpoint")->valuestring);
+	strcpy(mqtt_configurations.device_mac, moro_mac.mac_str);
 
-		sprintf(mqtt_configurations.auth_type, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "auth_type")->valuestring);
+	sprintf(last_will_topic, "%s/%s", MORO_MQTT_BASE_TOPIC, mqtt_configurations.device_mac);
 
-		sprintf(mqtt_configurations.username, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "username")->valuestring);
+	strcpy(mqtt_configurations.last_will_topic, last_will_topic);
 
-		sprintf(mqtt_configurations.password, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "password")->valuestring);
+	//--------------------------------------------------------------------------
+}
 
-		mqtt_configurations.ca_cert_size = cJSON_GetObjectItem(mqtt_configurations_json, "ca_cert_size")->valueint;
-
-		if (mqtt_configurations.ca_cert_size > 0) {
-			mqtt_configurations.ca_cert = (char*)malloc(mqtt_configurations.ca_cert_size);
-			sprintf(mqtt_configurations.ca_cert, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "ca_cert")->valuestring);
-		} else {
-			mqtt_configurations.ca_cert = NULL;
-		}
-
-		mqtt_configurations.client_cert_size = cJSON_GetObjectItem(mqtt_configurations_json, "client_cert_size")->valueint;
-
-		if (mqtt_configurations.client_cert_size > 0) {
-			mqtt_configurations.client_cert = (char*)malloc(mqtt_configurations.client_cert_size);
-			sprintf(mqtt_configurations.client_cert, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "client_cert")->valuestring);
-		} else {
-			mqtt_configurations.client_cert = NULL;
-		}
-
-		mqtt_configurations.client_key_size = cJSON_GetObjectItem(mqtt_configurations_json, "client_key_size")->valueint;
-
-		if (mqtt_configurations.client_key_size > 0) {
-			mqtt_configurations.client_key = (char*)malloc(mqtt_configurations.client_key_size);
-			sprintf(mqtt_configurations.client_key, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "client_key")->valuestring);
-		} else {
-			mqtt_configurations.client_key = NULL;
-		}
-
-		sprintf(mqtt_configurations.last_will_topic, "%s", cJSON_GetObjectItem(mqtt_configurations_json, "last_will_topic")->valuestring);
-
-		sprintf(mqtt_configurations.device_mac, "%s", moro_mac.mac_str);
-
-		// ESP_LOGI(MAIN_TAG, "MQTT Configurations: [%s]", cJSON_Print(mqtt_configurations_json));
-
-		free(buffer);
-		cJSON_Delete(mqtt_configurations_json);
-		close(fd);
-	} else {
-		ESP_LOGI(MAIN_TAG, "mqtt_configurations.json file didn't found. Preparing...");
-
-		cJSON* mqtt_configurations_json = cJSON_CreateObject();
-
-		cJSON_AddStringToObject(mqtt_configurations_json, "endpoint", "mqtt://46.2.23.249:1883");
-		memset(mqtt_configurations.endpoint, 0, sizeof(mqtt_configurations.endpoint));
-
-		cJSON_AddStringToObject(mqtt_configurations_json, "auth_type", "none");
-		sprintf(mqtt_configurations.auth_type, "none");
-
-		cJSON_AddStringToObject(mqtt_configurations_json, "username", "");
-		memset(mqtt_configurations.username, 0, sizeof(mqtt_configurations.username));
-
-		cJSON_AddStringToObject(mqtt_configurations_json, "password", "");
-		memset(mqtt_configurations.password, 0, sizeof(mqtt_configurations.password));
-
-		cJSON_AddNullToObject(mqtt_configurations_json, "ca_cert");
-		mqtt_configurations.ca_cert = NULL;
-
-		cJSON_AddNumberToObject(mqtt_configurations_json, "ca_cert_size", 0);
-		mqtt_configurations.ca_cert_size = 0;
-
-		cJSON_AddNullToObject(mqtt_configurations_json, "client_cert");
-		mqtt_configurations.client_cert = NULL;
-
-		cJSON_AddNumberToObject(mqtt_configurations_json, "client_cert_size", 0);
-		mqtt_configurations.client_cert_size = 0;
-
-		cJSON_AddNullToObject(mqtt_configurations_json, "client_key");
-		mqtt_configurations.client_key = NULL;
-
-		cJSON_AddNumberToObject(mqtt_configurations_json, "client_key_size", 0);
-		mqtt_configurations.client_key_size = 0;
-
-		sprintf(mqtt_configurations.device_mac, "%s", moro_mac.mac_str);
-		cJSON_AddStringToObject(mqtt_configurations_json, "device_mac", moro_mac.mac_str);
-
-		sprintf(last_will_topic, "%s/%s/die", MORO_MQTT_BASE_TOPIC, mqtt_configurations.device_mac);
-
-		cJSON_AddStringToObject(mqtt_configurations_json, "last_will_topic", last_will_topic);
-		sprintf(mqtt_configurations.last_will_topic, last_will_topic);
-
-		// create the file
-		int fd = open(mqtt_configurations_file_path, O_EXCL | O_CREAT);
-		moro_abort_if_true((fd < 0), "Failed to create mqtt_configurations.json file. Aborting.");
-		close(fd);
-
-		// ESP_LOGI(MAIN_TAG, "MQTT Configurations: [%s]", cJSON_Print(mqtt_configurations_json));
-
-		fd = open(mqtt_configurations_file_path, O_RDWR);
-		// write the file content
-		char* mqtt_configurations_json_string = cJSON_Print(mqtt_configurations_json);
-
-		moro_abort_if_true((write(fd, mqtt_configurations_json_string, strlen(mqtt_configurations_json_string)) < 0), "Failed to write mqtt_configurations.json file. Aborting.");
-
-		cJSON_Delete(mqtt_configurations_json);
-		free(mqtt_configurations_json_string);
-		close(fd);
-	}
+esp_err_t cb(const char* topic, const char* payload, size_t payload_len) {
+	ESP_LOGI(MAIN_TAG, "Received message on topic: %s, payload: %s", topic, payload);
+	return ESP_OK;
 }
 
 void app_main(void) {
 	ESP_ERROR_CHECK(esp_event_loop_create_default());
 
-	ESP_LOGI(MAIN_TAG, "Initializing SPIFFS");
-	ESP_ERROR_CHECK(init_spiffs(SPIFFS_BASE_PATH, SPIFFS_PARTITION_LABEL));
-
 	ESP_LOGI(MAIN_TAG, "Preparing MAC address");
 	ESP_ERROR_CHECK(read_mac(&moro_mac));
 
 	prepare_mqtt_configurations();
-
-	list_all_files(SPIFFS_BASE_PATH);
 
 	esp_err_t ret = moro_sim800l_init(UART_TX_PIN, UART_RX_PIN, UART_RX_BUFFER_SIZE, UART_TX_BUFFER_SIZE, UART_EVENT_QUEUE_SIZE, UART_EVENT_TASK_STACK_SIZE, UART_EVENT_TASK_PRIORITY);
 	if (ret != ESP_OK) {
@@ -207,5 +124,19 @@ void app_main(void) {
 		return;
 	}
 
-	ret = moro_mqtt_publish("test", "Hello World", 0, 0, false);
+	ret = moro_mqtt_subscribe_and_set_callback("monaroza/basak", cb);
+	if (ret != ESP_OK) {
+		ESP_LOGE(MAIN_TAG, "Failed to subscribe to topic");
+		return;
+	}
+
+	// while (1) {
+	// 	ret = moro_mqtt_publish("monaroza/basak", "Hello World", 0, 0, false);
+	// 	if (ret != ESP_OK) {
+	// 		ESP_LOGE(MAIN_TAG, "Failed to publish message");
+	// 	} else {
+	// 		ESP_LOGI(MAIN_TAG, "Message published successfully");
+	// 	}
+	// 	vTaskDelay(pdMS_TO_TICKS(1000));
+	// }
 }

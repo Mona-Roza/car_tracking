@@ -159,7 +159,7 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
 			break;
 		}
 		case MQTT_EVENT_PUBLISHED: {
-			// ESP_LOGI(MORO_MQTT_TAG, "MQTT Published to topic: [%.*s]", event->topic_len, event->topic);
+			ESP_LOGI(MORO_MQTT_TAG, "MQTT Published to topic: [%.*s]", event->topic_len, event->topic);
 			break;
 		}
 		case MQTT_EVENT_DATA: {
@@ -178,6 +178,8 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
 			item.topic		 = strdup(topic);
 			item.payload	 = strdup(payload);
 			item.payload_len = event->data_len;
+
+			ESP_LOGI(MORO_MQTT_TAG, "MQTT Data received from topic [%s]", topic);
 
 			if (xQueueSend(mqtt_data_queue, &item, pdMS_TO_TICKS(10000)) != pdTRUE) {
 				ESP_LOGE(MORO_MQTT_TAG, "MQTT Data Queue is full");
@@ -435,7 +437,7 @@ esp_err_t moro_mqtt_publish(const char* topic, char* data, int qos, int retain, 
 		return ESP_FAIL;
 	}
 
-	uint8_t ret = esp_mqtt_client_enqueue(mqtt_client, topic, data, strlen(data), qos, retain, store);
+	uint8_t ret = esp_mqtt_client_publish(mqtt_client, topic, data, strlen(data), qos, retain);
 	// ESP_LOGI(MORO_MQTT_TAG, "MQTT Publishing to topic: [%s],  ret: %d", topic, ret);
 
 	return ret < 0 ? ESP_FAIL : ESP_OK;

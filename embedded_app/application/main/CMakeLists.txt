@@ -12,5 +12,10 @@ idf_component_register(SRCS "${srcs}"
                
                        esp_timer
                        driver
-                   
+
+                        EMBED_TXTFILES
+                        "../embedded_certs/ca.pem"
+                        "../embedded_certs/cert.crt"
+                        "../embedded_certs/private.key"
+
                     )
