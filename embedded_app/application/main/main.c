@@ -38,8 +38,6 @@ extern const uint8_t private_key_start[] asm("_binary_private_key_start");
 extern const uint8_t private_key_end[] asm("_binary_private_key_end");
 
 void prepare_mqtt_configurations() {
-	char last_will_topic[128] = {0};
-
 	//--------------------------- MQTT Configurations --------------------------
 	/*
 		mqtt_configurations
@@ -80,10 +78,6 @@ void prepare_mqtt_configurations() {
 
 	strcpy(mqtt_configurations.device_mac, moro_mac.mac_str);
 
-	sprintf(last_will_topic, "%s/%s", MORO_MQTT_BASE_TOPIC, mqtt_configurations.device_mac);
-
-	strcpy(mqtt_configurations.last_will_topic, last_will_topic);
-
 	//--------------------------------------------------------------------------
 }
 
@@ -106,37 +100,32 @@ void app_main(void) {
 		return;
 	}
 
-	ret = moro_sim800l_set_data_mode();
-	if (ret != ESP_OK) {
-		ESP_LOGE(MAIN_TAG, "Failed to set data mode");
-		return;
-	}
-
-	esp_ip4_addr_t ip;
-	moro_sim800l_get_connected_ip(&ip);
-	ESP_LOGI(MAIN_TAG, "Connected IP: " IPSTR, IP2STR(&ip));
-
-	vTaskDelay(pdMS_TO_TICKS(1000));
-
 	ret = moro_mqtt_init(&mqtt_configurations);
 	if (ret != ESP_OK) {
 		ESP_LOGE(MAIN_TAG, "Failed to initialize MQTT");
 		return;
 	}
 
-	ret = moro_mqtt_subscribe_and_set_callback("monaroza/basak", cb);
-	if (ret != ESP_OK) {
-		ESP_LOGE(MAIN_TAG, "Failed to subscribe to topic");
-		return;
-	}
+	while (1) {
+		ESP_LOGW(MAIN_TAG, "==============================");
+		float latitude = 0, longitude = 0;
+		char date_time[32] = {0};
+		ret				   = moro_sim800l_get_location(&latitude, &longitude, date_time);
+		vTaskDelay(pdMS_TO_TICKS(2500));
+		ret = moro_sim800l_set_data_mode();
+		vTaskDelay(pdMS_TO_TICKS(10000));
+		if (ret == ESP_OK) {
+			char payload[128] = {0};
+			sprintf(payload, "{\"latitude\": %f, \"longitude\": %f, \"date_time\": \"%s\"}", latitude, longitude, date_time);
 
-	// while (1) {
-	// 	ret = moro_mqtt_publish("monaroza/basak", "Hello World", 0, 0, false);
-	// 	if (ret != ESP_OK) {
-	// 		ESP_LOGE(MAIN_TAG, "Failed to publish message");
-	// 	} else {
-	// 		ESP_LOGI(MAIN_TAG, "Message published successfully");
-	// 	}
-	// 	vTaskDelay(pdMS_TO_TICKS(1000));
-	// }
+			ret = moro_mqtt_publish("location/service", payload, 0, 0, 1);
+			if (ret != ESP_OK) {
+				ESP_LOGE(MAIN_TAG, "Failed to publish message");
+			} else {
+				ESP_LOGI(MAIN_TAG, "Message published successfully");
+			}
+		}
+		ESP_LOGW(MAIN_TAG, "==============================");
+		vTaskDelay(pdMS_TO_TICKS(2500));
+	}
 }

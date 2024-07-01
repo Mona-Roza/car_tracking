@@ -26,6 +26,6 @@ void moro_sim800l_get_connected_ip(esp_ip4_addr_t *ip);
 
 esp_err_t moro_sim800l_send_sms(const char *phone_number, const char *message);
 
-esp_err_t moro_sim800l_get_location(float *latitude, float *longitude);
+esp_err_t moro_sim800l_get_location(float *latitude, float *longitude, char *date_time);
 
 #endif /* _MORO_SIM800L_H_ */

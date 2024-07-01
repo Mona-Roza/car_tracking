@@ -156,14 +156,14 @@ esp_err_t moro_sim800l_set_data_mode() {
 		ESP_LOGE(MORO_SIM800L_TAG, "esp_modem_set_mode(ESP_MODEM_MODE_DATA) failed with %d", ret);
 		return ret;
 	}
-	/* Wait for IP address */
-	ESP_LOGI(MORO_SIM800L_TAG, "Waiting for IP address");
-	xEventGroupWaitBits(event_group, CONNECT_BIT, pdFALSE, pdFALSE, pdMS_TO_TICKS(30 * 1000));
+	// /* Wait for IP address */
+	// ESP_LOGI(MORO_SIM800L_TAG, "Waiting for IP address");
+	// xEventGroupWaitBits(event_group, CONNECT_BIT, pdFALSE, pdFALSE, pdMS_TO_TICKS(30 * 1000));
 
-	if ((CONNECT_BIT) & (!xEventGroupGetBits(event_group))) {
-		ESP_LOGE(MORO_SIM800L_TAG, "Failed to get IP address");
-		return ESP_FAIL;
-	}
+	// if ((CONNECT_BIT) & (!xEventGroupGetBits(event_group))) {
+	// 	ESP_LOGE(MORO_SIM800L_TAG, "Failed to get IP address");
+	// 	return ESP_FAIL;
+	// }
 
 	return ESP_OK;
 }
@@ -198,11 +198,88 @@ esp_err_t moro_sim800l_send_sms(const char *phone_number, const char *message) {
 	return ESP_OK;
 }
 
-esp_err_t moro_sim800l_get_location(float *latitude, float *longitude) {
+esp_err_t moro_sim800l_get_location(float *latitude, float *longitude, char *date_time) {
 	if (!is_inited) {
 		ESP_LOGE(MORO_SIM800L_TAG, "SIM800L module is not initialized");
 		return ESP_FAIL;
 	}
+
+	esp_err_t ret = esp_modem_set_mode(dce, ESP_MODEM_MODE_COMMAND);
+	if (ret != ESP_OK) {
+		ESP_LOGE(MORO_SIM800L_TAG, "esp_modem_set_mode(ESP_MODEM_MODE_COMMAND) failed with %d", ret);
+		return ret;
+	}
+
+	char response[1024];
+	ret = esp_modem_at(dce, "AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"", response, 5000);
+	ESP_LOGI(MORO_SIM800L_TAG, "SAPBR 3,1 contype response: %s", response);
+
+	memset(response, 0, sizeof(response));
+	ret = esp_modem_at(dce, "AT+SAPBR=3,1,\"APN\",\"internet\"", response, 5000);
+	ESP_LOGI(MORO_SIM800L_TAG, "SAPBR 3,1 apn response: %s", response);
+
+	memset(response, 0, sizeof(response));
+	ret = esp_modem_at(dce, "AT+SAPBR=1,1", response, 5000);
+	ESP_LOGI(MORO_SIM800L_TAG, "SAPBR 1,1 response: %s", response);
+
+	memset(response, 0, sizeof(response));
+	ret = esp_modem_at(dce, "AT+SAPBR=2,1", response, 5000);
+	ESP_LOGI(MORO_SIM800L_TAG, "SAPBR 2,1 response: %s", response);
+
+	memset(response, 0, sizeof(response));
+	ret = esp_modem_at(dce, "AT+CLBS=4,1", response, 5000);
+	if (ret != ESP_OK) {
+		ESP_LOGE(MORO_SIM800L_TAG, "esp_modem_at(AT+CLBS=1,1) failed with %d", ret);
+		return ret;
+	}
+
+	ESP_LOGI(MORO_SIM800L_TAG, "Location response: %s", response);
+
+	//  response like  0,28.985866,41.068093,550,24/07/02,02:19:34 we need to parse this
+	//  0 is the status, 28.985866 is the latitude, 41.068093 is the longitude, 550 is the altitude, 24/07/02 is the date, 02:19:34 is the time
+	char *token = strtok(response, ",");
+	if (token == NULL) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to parse location response");
+		return ESP_FAIL;
+	}
+
+	token = strtok(NULL, ",");
+	if (token == NULL) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to parse latitude");
+		return ESP_FAIL;
+	}
+	*longitude = atof(token);
+
+	token = strtok(NULL, ",");
+	if (token == NULL) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to parse longitude");
+		return ESP_FAIL;
+	}
+	*latitude = atof(token);
+
+	token = strtok(NULL, ",");
+	if (token == NULL) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to parse altitude");
+		return ESP_FAIL;
+	}
+
+	token = strtok(NULL, ",");
+	if (token == NULL) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to parse altitude");
+		return ESP_FAIL;
+	}
+	char date_str[32] = {0};
+	strcpy(date_str, token);
+
+	token = strtok(NULL, ",");
+	if (token == NULL) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to parse date");
+		return ESP_FAIL;
+	}
+	char time_str[32] = {0};
+	strcpy(time_str, token);
+
+	sprintf(date_time, "%s,%s", date_str, time_str);
 
 	return ESP_OK;
 }
