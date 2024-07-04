@@ -134,12 +134,17 @@ esp_err_t moro_sim800l_get_signal_quality(int *rssi, int *ber) {
 		return ESP_FAIL;
 	}
 
-	esp_err_t err = esp_modem_get_signal_quality(dce, &rssi, &ber);
+	int rssi_val, ber_val;
+	esp_err_t err = esp_modem_get_signal_quality(dce, &rssi_val, &ber_val);
 	if (err != ESP_OK) {
 		ESP_LOGE(MORO_SIM800L_TAG, "esp_modem_get_signal_quality failed with %d %s", err, esp_err_to_name(err));
 		return err;
 	}
-	ESP_LOGI(MORO_SIM800L_TAG, "Signal quality: rssi=%d, ber=%d", *rssi, *ber);
+
+	memcpy(rssi, &rssi_val, sizeof(int));
+	memcpy(ber, &ber_val, sizeof(int));
+
+	ESP_LOGI(MORO_SIM800L_TAG, "Signal quality: rssi=%d, ber=%d", rssi_val, ber_val);
 	return ESP_OK;
 }
 
@@ -156,14 +161,14 @@ esp_err_t moro_sim800l_set_data_mode() {
 		ESP_LOGE(MORO_SIM800L_TAG, "esp_modem_set_mode(ESP_MODEM_MODE_DATA) failed with %d", ret);
 		return ret;
 	}
-	// /* Wait for IP address */
-	// ESP_LOGI(MORO_SIM800L_TAG, "Waiting for IP address");
-	// xEventGroupWaitBits(event_group, CONNECT_BIT, pdFALSE, pdFALSE, pdMS_TO_TICKS(30 * 1000));
+	/* Wait for IP address */
+	ESP_LOGI(MORO_SIM800L_TAG, "Waiting for IP address");
+	xEventGroupWaitBits(event_group, CONNECT_BIT, pdFALSE, pdFALSE, pdMS_TO_TICKS(30 * 1000));
 
-	// if ((CONNECT_BIT) & (!xEventGroupGetBits(event_group))) {
-	// 	ESP_LOGE(MORO_SIM800L_TAG, "Failed to get IP address");
-	// 	return ESP_FAIL;
-	// }
+	if ((CONNECT_BIT) & (!xEventGroupGetBits(event_group))) {
+		ESP_LOGE(MORO_SIM800L_TAG, "Failed to get IP address");
+		return ESP_FAIL;
+	}
 
 	return ESP_OK;
 }
@@ -211,6 +216,7 @@ esp_err_t moro_sim800l_get_location(float *latitude, float *longitude, char *dat
 	}
 
 	char response[1024];
+	memset(response, 0, sizeof(response));
 	ret = esp_modem_at(dce, "AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"", response, 5000);
 	ESP_LOGI(MORO_SIM800L_TAG, "SAPBR 3,1 contype response: %s", response);
 

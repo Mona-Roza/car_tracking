@@ -17,85 +17,11 @@ static char static_client_id[32]			  = {0};
 
 static bool _is_connected = false;
 
-// ------ mqtt data task ------ //
-static QueueHandle_t mqtt_data_queue = NULL;
-// Task for device measure
-static TaskHandle_t mqtt_data_task_handle = NULL;
-
 #define MQTT_DATA_TASK_PRIORITY 5
 #define MQTT_DATA_TASK_CORE 0
 #define MQTT_DATA_TASK_STACK_SIZE 30000
 
-static StaticTask_t mqtt_data_task_buffer;
-static StackType_t* mqtt_data_task_stack = NULL;
-
-typedef struct {
-	char* topic;
-	char* payload;
-	size_t payload_len;
-} mqtt_data_queue_item_t;
-// ---------------------------- //
-
-typedef struct {
-	const char* topic;
-	const char* data;
-} mqtt_publish_item_t;
-
-typedef struct {
-	const char* topic;
-	mqtt_subscription_callback_t callback;
-	bool is_subscribed;
-} mqtt_subscription_callback_item_t;
-
-static llist mqtt_subscription_callback_llist = NULL;
-
 static mqtt_event_handler_callback_t mqtt_event_handler_callback = NULL;
-
-static void parse_message_and_call_callback(char* topic, char* payload, size_t payload_len) {
-	// traverse vector and find the callback
-	if (llist_size(mqtt_subscription_callback_llist) == 0) {
-		ESP_LOGE(MORO_MQTT_TAG, "MQTT subscription callback vector is empty");
-		return;
-	}
-
-	bool match_found = false;
-
-	struct node* curr = mqtt_subscription_callback_llist;
-
-	while (curr != NULL) {
-		mqtt_subscription_callback_item_t* item = (mqtt_subscription_callback_item_t*)malloc(sizeof(curr->data));
-		if (item->topic == NULL || item->is_subscribed == false) {
-			continue;
-		}
-
-		if (wildcard_match(item->topic, topic)) {
-			match_found	  = true;
-			esp_err_t ret = item->callback(topic, payload, payload_len);
-			if (ret != ESP_OK) {
-				ESP_LOGE(MORO_MQTT_TAG, "unable to handle mqtt message for topic [%s]", topic);
-			}
-		}
-
-		curr = curr->next;
-		free(item);
-	}
-
-	if (!match_found) {
-		ESP_LOGE(MORO_MQTT_TAG, "MQTT topic [%s] doesn't match with any callback", topic);
-	}
-
-	return;
-}
-
-static void mqtt_data_task(void* _) {
-	mqtt_data_queue_item_t item;
-	while (1) {
-		if (xQueueReceive(mqtt_data_queue, &item, pdMS_TO_TICKS(10000)) == pdTRUE) {
-			// ESP_LOGI(MORO_MQTT_TAG, "MQTT Data Task: Topic: [%s], Payload: [%s]", item.topic, item.payload);
-			parse_message_and_call_callback(item.topic, item.payload, item.payload_len);
-		}
-	}
-}
 
 static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_t event_id, void* event_data) {
 	esp_mqtt_event_handle_t event	= (esp_mqtt_event_handle_t)event_data;
@@ -109,29 +35,6 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
 			_is_connected = true;
 
 			int ret = 0;
-
-			struct node* curr = mqtt_subscription_callback_llist;
-			while (curr != NULL) {
-				mqtt_subscription_callback_item_t* item = (mqtt_subscription_callback_item_t*)malloc(sizeof(curr->data));
-				if (item->topic == NULL || strcmp(item->topic, "") == 0) {
-					continue;
-				}
-
-				ret = esp_mqtt_client_subscribe_single(client, item->topic, 0);
-				if (ret == -1 || ret == -2) {
-					ESP_LOGE(MORO_MQTT_TAG, "MQTT subscribe failed");
-					item->is_subscribed = false;
-					ESP_LOGE(MORO_MQTT_TAG, "MQTT couldn't subscribe to topic [%s]", item->topic);
-					break;
-				} else {
-					item->is_subscribed = true;
-					// ESP_LOGI(MORO_MQTT_TAG, "MQTT subscribed to topic [%s]", item->topic);
-				}
-
-				curr = curr->next;
-				free(item);
-			}
-			ESP_LOGI(MORO_MQTT_TAG, "MQTT subscribed to all topics");
 
 			if (mqtt_event_handler_callback != NULL) {
 				mqtt_event_t event = _MQTT_EVENT_CONNECTED_;
@@ -174,16 +77,8 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
 			char payload[event->data_len + 1];
 			sprintf(payload, "%.*s", event->data_len, event->data);
 
-			mqtt_data_queue_item_t item;
-			item.topic		 = strdup(topic);
-			item.payload	 = strdup(payload);
-			item.payload_len = event->data_len;
-
 			ESP_LOGI(MORO_MQTT_TAG, "MQTT Data received from topic [%s]", topic);
-
-			if (xQueueSend(mqtt_data_queue, &item, pdMS_TO_TICKS(10000)) != pdTRUE) {
-				ESP_LOGE(MORO_MQTT_TAG, "MQTT Data Queue is full");
-			}
+			ESP_LOGI(MORO_MQTT_TAG, "MQTT Data: [%s]", payload);
 
 			break;
 		}
@@ -218,29 +113,6 @@ esp_err_t moro_mqtt_init(mqtt_configurations_t* mqtt_configurations) {
 		ESP_LOGE(MORO_MQTT_TAG, "MQTT client already initialized");
 		return ESP_FAIL;
 	}
-
-	mqtt_data_queue = xQueueCreate(10, sizeof(mqtt_data_queue_item_t));
-	if (mqtt_data_queue == NULL) {
-		ESP_LOGE(MORO_MQTT_TAG, "Failed to create mqtt data queue");
-		return ESP_FAIL;
-	}
-
-	mqtt_data_task_stack = (StackType_t*)malloc(MQTT_DATA_TASK_STACK_SIZE);
-	if (mqtt_data_task_stack == NULL) {
-		ESP_LOGE(MORO_MQTT_TAG, "Failed to allocate memory for mqtt data task stack");
-		// delete queue
-		vQueueDelete(mqtt_data_queue);
-		mqtt_data_queue = NULL;
-		return ESP_FAIL;
-	}
-
-	mqtt_data_task_handle = xTaskCreateStaticPinnedToCore(mqtt_data_task, "mqtt_data_task", MQTT_DATA_TASK_STACK_SIZE, NULL, MQTT_DATA_TASK_PRIORITY, mqtt_data_task_stack, &mqtt_data_task_buffer, MQTT_DATA_TASK_CORE);
-
-	if (mqtt_subscription_callback_llist != NULL) {
-		llist_free(&mqtt_subscription_callback_llist);
-	}
-
-	mqtt_subscription_callback_llist = llist_create(NULL);
 
 	char random_str[11];
 
@@ -358,20 +230,6 @@ esp_err_t moro_mqtt_init(mqtt_configurations_t* mqtt_configurations) {
 	mqtt_client = esp_mqtt_client_init(&client_config);
 	if (mqtt_client == NULL) {
 		ESP_LOGE(MORO_MQTT_TAG, "MQTT client init failed");
-		if (mqtt_data_task_handle != NULL) {
-			vTaskDelete(mqtt_data_task_handle);
-			mqtt_data_task_handle = NULL;
-		}
-
-		if (mqtt_data_queue != NULL) {
-			vQueueDelete(mqtt_data_queue);
-			mqtt_data_queue = NULL;
-		}
-
-		if (mqtt_data_task_stack != NULL) {
-			free(mqtt_data_task_stack);
-			mqtt_data_task_stack = NULL;
-		}
 
 		return ESP_FAIL;
 	}
@@ -382,22 +240,6 @@ esp_err_t moro_mqtt_init(mqtt_configurations_t* mqtt_configurations) {
 		// deinit mqtt client
 		esp_mqtt_client_destroy(mqtt_client);
 
-		if (mqtt_data_task_handle != NULL) {
-			vTaskDelete(mqtt_data_task_handle);
-			mqtt_data_task_handle = NULL;
-		}
-
-		if (mqtt_data_queue != NULL) {
-			vQueueDelete(mqtt_data_queue);
-			mqtt_data_queue = NULL;
-		}
-
-		// free mqtt_data_task_stack
-		if (mqtt_data_task_stack != NULL) {
-			free(mqtt_data_task_stack);
-			mqtt_data_task_stack = NULL;
-		}
-
 		return ret;
 	}
 
@@ -407,22 +249,6 @@ esp_err_t moro_mqtt_init(mqtt_configurations_t* mqtt_configurations) {
 
 		// deinit mqtt client
 		esp_mqtt_client_destroy(mqtt_client);
-
-		if (mqtt_data_task_handle != NULL) {
-			vTaskDelete(mqtt_data_task_handle);
-			mqtt_data_task_handle = NULL;
-		}
-
-		if (mqtt_data_queue != NULL) {
-			vQueueDelete(mqtt_data_queue);
-			mqtt_data_queue = NULL;
-		}
-
-		// free mqtt_data_task_stack
-		if (mqtt_data_task_stack != NULL) {
-			free(mqtt_data_task_stack);
-			mqtt_data_task_stack = NULL;
-		}
 
 		return ret;
 	}
@@ -443,54 +269,6 @@ esp_err_t moro_mqtt_publish(const char* topic, char* data, int qos, int retain, 
 	return ret < 0 ? ESP_FAIL : ESP_OK;
 }
 
-esp_err_t moro_mqtt_subscribe_and_set_callback(const char* topic, mqtt_subscription_callback_t callback) {
-	// qos = 0
-
-	char* topic_copy = (char*)malloc(strlen(topic) + 1);
-	strcpy(topic_copy, topic);
-
-	mqtt_subscription_callback_item_t item;
-	item.topic		   = strdup(topic);
-	item.callback	   = callback;
-	item.is_subscribed = false;
-
-	llist_push(&mqtt_subscription_callback_llist, &item);
-
-	if (mqtt_client != NULL && _is_connected) {
-		esp_mqtt_client_subscribe_single(mqtt_client, topic, 0);
-	}
-
-	return ESP_OK;
-}
-
-esp_err_t moro_mqtt_unsubscribe(char* topic) {
-	if (mqtt_client == NULL) {
-		ESP_LOGE(MORO_MQTT_TAG, "MQTT client is null");
-		return ESP_FAIL;
-	}
-
-	esp_err_t ret = esp_mqtt_client_unsubscribe(mqtt_client, topic);
-	if (ret != ESP_OK) {
-		ESP_LOGE(MORO_MQTT_TAG, "MQTT unsubscribe failed");
-		return ESP_FAIL;
-	}
-
-	struct node* curr = mqtt_subscription_callback_llist;
-	uint8_t i		  = 0;
-	while (curr != NULL) {
-		mqtt_subscription_callback_item_t* item = (mqtt_subscription_callback_item_t*)malloc(sizeof(curr->data));
-
-		if (strcmp(item->topic, topic) == 0) {
-			llist_remove(&mqtt_subscription_callback_llist, i);
-			break;
-		}
-
-		i++;
-	}
-
-	return ESP_OK;
-}
-
 bool moro_mqtt_is_connected() {
 	return _is_connected;
 }
@@ -501,25 +279,6 @@ esp_err_t moro_mqtt_configurations_changed(mqtt_configurations_t* mqtt_configura
 		esp_mqtt_client_disconnect(mqtt_client);
 		esp_mqtt_client_stop(mqtt_client);
 		esp_mqtt_client_destroy(mqtt_client);
-
-		// delete task, queue and buffers
-
-		if (mqtt_data_task_handle != NULL) {
-			vTaskDelete(mqtt_data_task_handle);
-			mqtt_data_task_handle = NULL;
-		}
-
-		if (mqtt_data_queue != NULL) {
-			vQueueDelete(mqtt_data_queue);
-			mqtt_data_queue = NULL;
-		}
-
-		// free mqtt_data_task_stack
-		if (mqtt_data_task_stack != NULL) {
-			free(mqtt_data_task_stack);
-			mqtt_data_task_stack = NULL;
-		}
-
 		// reset mqtt_client
 		mqtt_client = NULL;
 	}

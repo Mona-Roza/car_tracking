@@ -45,10 +45,6 @@ esp_err_t moro_mqtt_init(mqtt_configurations_t* mqtt_configurations);
 
 esp_err_t moro_mqtt_publish(const char* topic, char* data, int qos, int retain, bool store);
 
-esp_err_t moro_mqtt_subscribe_and_set_callback(const char* topic, mqtt_subscription_callback_t callback);
-
-esp_err_t moro_mqtt_unsubscribe(char* topic);
-
 bool moro_mqtt_is_connected();
 
 esp_err_t moro_mqtt_configurations_changed(mqtt_configurations_t* mqtt_configurations);

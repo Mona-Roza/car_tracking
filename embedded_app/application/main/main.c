@@ -100,6 +100,11 @@ void app_main(void) {
 		return;
 	}
 
+	ret = moro_sim800l_set_data_mode();
+	if (ret != ESP_OK) {
+		ESP_LOGE(MAIN_TAG, "Failed to set data mode");
+	}
+
 	ret = moro_mqtt_init(&mqtt_configurations);
 	if (ret != ESP_OK) {
 		ESP_LOGE(MAIN_TAG, "Failed to initialize MQTT");
