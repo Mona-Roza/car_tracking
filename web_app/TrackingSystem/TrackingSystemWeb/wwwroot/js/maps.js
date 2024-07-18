@@ -7,6 +7,8 @@ var markers = []
 var infowindow
 var time
 let historyClicked = false
+var polyline
+var polylines = []
 export function initMap (latData = 41.1082, lngData = 28.9784) {
     time = moment().format('YYYY-MM-DD HH:mm:ss')
     map = new google.maps.Map(document.getElementById('map'), {
@@ -20,6 +22,7 @@ export function initMap (latData = 41.1082, lngData = 28.9784) {
         icon: {
             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
             scale: 4,
+            rotation: 0,
         }, // googlenin "gezi" simgesi
         title: 'Vehicle',
         customTime: time
@@ -29,6 +32,13 @@ export function initMap (latData = 41.1082, lngData = 28.9784) {
         var konum = marker.getPosition()
         infowindow.setContent('Konum: ' + konum.toUrlValue(6) + '<br> Zaman: ' + time)
         infowindow.open(map, marker)
+    })
+    polyline = new google.maps.Polyline({
+        path: polylines,
+        geodesic: true,
+        strokeColor: '#0000FF',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
     })
 }
 
@@ -44,29 +54,26 @@ export function updateMap (location) { //update maps
     if (historyClicked) {
         loadNewHistoryLocation()
     }
+    let icon = marker.getIcon()
+    // Rotasyonu ayarla
+    icon.rotation = angleMarker(location, marker.getPosition())
+    // Yeni ikonu marker'a set et
+    marker.setIcon(icon)
+
     time = moment(location.timestamp).format('YYYY-MM-DD HH:mm:ss')
     var newLatLng = new google.maps.LatLng(location.latitude, location.longitude)
     marker.setPosition(newLatLng)
     map.panTo(newLatLng)
     marker.customTime = time
+
     var contentString = 'Konum: ' + newLatLng.toUrlValue(6) + '<br> Zaman: ' + time
     infowindow.setContent(contentString)
     if (infowindow.getMap()) {
         infowindow.open(map, marker)
     }
-}
-
-function loadNewHistoryLocation () {
-    var position = marker.getPosition()
-    console.log(marker.customTime)
-    var newLatLng = new google.maps.LatLng(position.lat(), position.lng())
-    newMarker = new google.maps.Marker({
-        position: newLatLng,
-        map: map,
-        title: 'Konum: ' + newLatLng.toUrlValue(6)
-    })
-    markers.push(newMarker)
-    addMarker(newMarker, marker.customTime)
+    // Polyline'a marker konumunu ekle
+    polylines.push(marker.getPosition())
+    polyline.setPath(polylines)
 }
 
 export function loadHistoryLocations () {
@@ -79,23 +86,22 @@ export function loadHistoryLocations () {
                 dataType: 'json', // Data type expected from the server
                 success: function (response) {
                     // Handle successful response
+                    polylines = []
                     $.each(response, function (index, item) {
                         var time = item.timestamp
                         var newLatLng = new google.maps.LatLng(item.latitude, item.longitude)
 
-                        newMarker = new google.maps.Marker({
-                            position: newLatLng,
-                            map: map,
-                            title: 'Konum: ' + newLatLng.toUrlValue(6)
-                        })
-                        markers.push(newMarker)
+                        createNewMarker(newLatLng, time)
 
-                        addMarker(newMarker, time)
+                        // Polyline'a konumu ekle
+                        polylines.push(newLatLng)
                     })
 
                     if (response.length > 0) {
                         map.panTo(new google.maps.LatLng(response[0].latitude, response[0].longitude))
                     }
+                    polyline.setPath(polylines)
+                    polyline.setMap(map)
                 },
                 error: function (xhr, status, error) {
                     // Handle errors
@@ -111,8 +117,19 @@ export function loadHistoryLocations () {
             markers = [] // Marker listesini sýfýrla
             historyClicked = false
             document.getElementById('history').textContent = 'Gecmisi Goster'
+            // Polyline'ý haritadan kaldýr
+            polyline.setMap(null)
         }
     })
+}
+function loadNewHistoryLocation () {
+    var position = marker.getPosition()
+    var newLatLng = new google.maps.LatLng(position.lat(), position.lng())
+
+    createNewMarker(newLatLng, marker.customTime)
+
+    polylines.push(newLatLng)
+    polyline.setPath(polylines)
 }
 function addMarker (newMarker, time) {
     var contentString = 'Konum: ' + newMarker.getPosition().toUrlValue(6) + '<br> Zaman: ' + moment(time).format('YYYY-MM-DD HH:mm:ss')
@@ -120,4 +137,46 @@ function addMarker (newMarker, time) {
         infowindow.setContent(contentString)
         infowindow.open(map, newMarker)
     })
+}
+function createNewMarker (position, time) {
+    newMarker = new google.maps.Marker({
+        position: position,
+        map: map,
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,  // Küçük yuvarlak ikon
+            scale: 5,  // Ýkonun boyutu
+            fillColor: '#ADD8E6',  // Ýkonun rengi
+            fillOpacity: 1.0,
+            strokeColor: '#0000FF',
+            strokeWeight: 1
+        },
+        title: 'Konum: ' + position.toUrlValue(6)
+    })
+    markers.push(newMarker)
+    addMarker(newMarker, time)
+}
+
+function angleMarker (newMarker, oldMarker) {
+    // Dereceleri radyana çevir
+    const toRadians = deg => deg * (Math.PI / 180)
+    // Baþlangýç ve bitiþ koordinatlarýný radyana çevir
+    const lat1 = toRadians(oldMarker.lat())
+    const lon1 = toRadians(oldMarker.lng())
+    const lat2 = toRadians(newMarker.latitude)
+    const lon2 = toRadians(newMarker.longitude)
+
+    // Boylam farkýný hesapla
+    const dLon = lon2 - lon1
+
+    // Açýyý hesapla
+    const y = Math.sin(dLon) * Math.cos(lat2)
+    const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon)
+    let angle = Math.atan2(y, x)
+
+    // Radyaný dereceye çevir
+    angle = angle * (180 / Math.PI)
+
+    // Negatif açýlarý pozitife çevir (0-360 aralýðýna getir)
+    angle = (angle + 360) % 360
+    return angle
 }

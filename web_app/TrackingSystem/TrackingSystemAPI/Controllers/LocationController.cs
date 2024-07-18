@@ -18,7 +18,7 @@ namespace TrackingSystemAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetLocationHistory()
         {
-            var requestUrl = "http://localhost:9090/api/locations";
+            var requestUrl = "http://localhost:8080/api/locations";
             var response = await _httpClient.GetAsync(requestUrl);
             if (response.IsSuccessStatusCode)
             {
