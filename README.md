@@ -23,13 +23,15 @@ BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ**
 **ARAÇ TAKİP SİSTEMİ** 
 
 **Tekirdağ Namık Kemal Üniversitesi Çorlu Mühendislik Fakültesi** 
-**Bilgisayar Mühendisliği Bölümü**      **Lisans Bitirme Projesi** 
+**Bilgisayar Mühendisliği Bölümü**     
+ **Lisans Bitirme Projesi** 
 
 **Bitirme Projesinin Savunulduğu Tarih: 26/01/2024** 
 
-**Ahmet Furkan UGAR 1190606058 Başak Nisan İVGEN 1200606002**  
-
-**Burak İlkaan ALİM 1200606050 Mustafa ÇELİK 1200606027** 
+**Ahmet Furkan UGAR 1190606058** 
+**Başak Nisan İVGEN 1200606002**  
+**Burak İlkaan ALİM 1200606050**
+**Mustafa ÇELİK 1200606027** 
 
 **Danışmanlar:  Dr. Öğr. Üyesi Halil Nusret BULUŞ, Dr. Öğr. Üyesi Erkan ÖZHAN** 
 
