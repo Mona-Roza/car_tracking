@@ -644,7 +644,7 @@ Türkiye İstatistik Kurumu (TÜİK), 2018, İstatistik Göstergeler, Kişi baş
 
 3. **EKLER** 
 
-**ÖZGEÇMİŞ - 4  Fotoğraf** ![](images/016.png)
+**ÖZGEÇMİŞLER**
 
 
 
